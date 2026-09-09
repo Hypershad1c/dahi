@@ -56,7 +56,7 @@ import {
   statistics,
 } from "@/data/site";
 
-const chartColors = ["#0B1F33", "#123B56", "#1B7A5A", "#A8B2BE", "#D8C67D"];
+const chartColors = ["#0147AD", "#01347E", "#0147AD", "#A8B2BE", "#D8C67D"];
 
 const reveal = {
   initial: { opacity: 0, y: 32 },
@@ -92,7 +92,7 @@ function SectionHeader({
   return (
     <div className="mb-10 max-w-3xl">
       <SectionLabel text={eyebrow} />
-      <h2 className="mt-5 text-4xl font-semibold tracking-[-0.05em] text-[#0B1F33] md:text-5xl">
+      <h2 className="mt-5 text-4xl font-semibold tracking-[-0.05em] text-[#0147AD] md:text-5xl">
         {title}
       </h2>
       {description ? <p className="mt-5 text-lg text-[#66727D]">{description}</p> : null}
@@ -129,7 +129,7 @@ function AnimatedCounter({ value, suffix = "", prefix = "" }: { value: number; s
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="text-4xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+    <span ref={ref} className="text-4xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
       {prefix}
       {count}
       {suffix}
@@ -147,6 +147,7 @@ const copy = {
       { label: "Investir", href: "#investir" },
       { label: "Études & Données", href: "#donnees" },
       { label: "Projets", href: "#projets" },
+      { label: "Stades 2030", href: "#stades-2030" },
       { label: "Vision", href: "#vision" },
       { label: "Contact", href: "#contact" },
     ],
@@ -204,9 +205,9 @@ const copy = {
     candidateName: "Hamad El Dhehi / حمد الدهي",
     candidateRole: "Acteur territorial et candidat aux institutions",
     candidateIntro: "Hamad El Dhehi incarne une vision de proximité, de développement territorial et de représentation du terrain au service de Benslimane et de ses habitants.",
-    candidateBackground: "Son engagement s'inscrit dans un projet de développement structurant : mieux représenter les citoyens, encourager les opportunités d'investissement, impulser des projets d'infrastructure et faire de Benslimane un territoire plus attractif à l'horizon de la Coupe du Monde 2026 et au-delà.",
+    candidateBackground: "Son engagement s'inscrit dans un projet de développement structurant : mieux représenter les citoyens, encourager les opportunités d'investissement, impulser des projets d'infrastructure et faire de Benslimane un territoire plus attractif à l'horizon de la Coupe du Monde 2030 et au-delà.",
     wcTitle: "Une dynamique territoriale qui va au-delà du sport.",
-    wcIntro: "À l'horizon de la Coupe du Monde 2026, Benslimane se positionne comme un territoire stratégique pour le sport, l'accueil, l'infrastructure et la promotion de l'image du Maroc.",
+    wcIntro: "À l'horizon de la Coupe du Monde 2030, Benslimane se positionne comme un territoire stratégique pour le sport, l'accueil, l'infrastructure et la promotion de l'image du Maroc.",
     wcText: "Dans ce contexte, l'enjeu n'est pas seulement de recevoir des événements, mais de transformer cette visibilité en opportunité de développement économique, de modernisation urbaine et de rayonnement territorial.",
     wcQuote: "Benslimane mérite une représentation forte, ancrée dans le terrain et tournée vers l'avenir. Notre ambition est de faire de cette province un espace de projets, d'opportunités et de développement durable, bien au-delà de l'événement sportif.",
     langToggle: "AR",
@@ -218,6 +219,7 @@ const copy = {
       { label: "الاستثمار", href: "#investir" },
       { label: "الدراسات والبيانات", href: "#donnees" },
       { label: "المشاريع", href: "#projets" },
+      { label: "ملاعب 2030", href: "#stades-2030" },
       { label: "الرؤية", href: "#vision" },
       { label: "تواصل", href: "#contact" },
     ],
@@ -274,9 +276,9 @@ const copy = {
     candidateName: "حمد الدهي / Hamad El Dhehi",
     candidateRole: "فاعل محلي ومرشح للهيئات المنتخبة",
     candidateIntro: "يمثل حمد الدهي رؤية قريبة من المواطنين وتطويرية ترتكز على أرض الواقع لخدمة بن سليمان وسكانها.",
-    candidateBackground: "يأتي هذا التزامه في إطار مشروع تنموي بنّاء: تمثيل أفضل للمواطنين، تشجيع الاستثمارات، وتطوير مشاريع البنية التحتية لجعل بن سليمان أكثر جاذبية في أفق كأس العالم 2026 وما بعدها.",
+    candidateBackground: "يأتي هذا التزامه في إطار مشروع تنموي بنّاء: تمثيل أفضل للمواطنين، تشجيع الاستثمارات، وتطوير مشاريع البنية التحتية لجعل بن سليمان أكثر جاذبية في أفق كأس العالم 2030 وما بعدها.",
     wcTitle: "ديناميكية إقليمية تتجاوز الرياضة.",
-    wcIntro: "في أفق كأس العالم 2026، تتبوأ بن سليمان موقعاً استراتيجياً في مجالات الرياضة، الاستقبال، البنية التحتية وتعزيز صورة المغرب.",
+    wcIntro: "في أفق كأس العالم 2030، تتبوأ بن سليمان موقعاً استراتيجياً في مجالات الرياضة، الاستقبال، البنية التحتية وتعزيز صورة المغرب.",
     wcText: "في هذا السياق، لا يقتصر التحدي على استضافة الفعاليات فقط، بل على تحويل هذه الواجهة إلى فرصة لتنمية اقتصادية، تحديث حضري وتوسع في الظهور الإقليمي.",
     wcQuote: "تستحق بن سليمان تمثيلاً قوياً ومتماسكا مع الأرض وموجهاً نحو المستقبل. هدفنا هو جعل هذه المحافظة مساحة للمشاريع والفرص والتنمية المستدامة، بعيداً عن الحدث الرياضي فقط.",
     langToggle: "FR",
@@ -290,6 +292,7 @@ const navLabels = {
     { label: "Investir", href: "#investir" },
     { label: "Études & Données", href: "#donnees" },
     { label: "Projets", href: "#projets" },
+    { label: "Stades 2030", href: "#stades-2030" },
     { label: "Vision", href: "#vision" },
     { label: "Contact", href: "#contact" },
   ],
@@ -299,6 +302,7 @@ const navLabels = {
     { label: "الاستثمار", href: "#investir" },
     { label: "الدراسات والبيانات", href: "#donnees" },
     { label: "المشاريع", href: "#projets" },
+    { label: "ملاعب 2030", href: "#stades-2030" },
     { label: "الرؤية", href: "#vision" },
     { label: "تواصل", href: "#contact" },
   ],
@@ -307,6 +311,16 @@ const navLabels = {
 function useTextDirection(language: Language) {
   return language === "ar" ? "rtl" : "ltr";
 }
+
+
+const moroccoStadiums = [
+  { name: "Grand Stade Hassan II", nameAr: "الملعب الكبير الحسن الثاني", city: "Casablanca", cityAr: "الدار البيضاء", detail: "Un projet métropolitain d’envergure pour le Grand Casablanca.", detailAr: "مشروع حضري كبير لمنطقة الدار البيضاء الكبرى.", tag: "Projet majeur", tagAr: "مشروع كبير" },
+  { name: "Complexe sportif Prince Moulay Abdellah", nameAr: "المجمع الرياضي الأمير مولاي عبد الله", city: "Rabat", cityAr: "الرباط", detail: "Une enceinte au cœur de la capitale administrative du Royaume.", detailAr: "منشأة رياضية في قلب العاصمة الإدارية للمملكة.", tag: "Capitale", tagAr: "العاصمة" },
+  { name: "Grand Stade de Tanger", nameAr: "الملعب الكبير لطنجة", city: "Tanger", cityAr: "طنجة", detail: "Une porte d’entrée internationale sur le détroit de Gibraltar.", detailAr: "بوابة دولية على مضيق جبل طارق.", tag: "Nord du Maroc", tagAr: "شمال المغرب" },
+  { name: "Grand Stade de Marrakech", nameAr: "الملعب الكبير لمراكش", city: "Marrakech", cityAr: "مراكش", detail: "Un site sportif connecté à l’attractivité touristique de la ville ocre.", detailAr: "منشأة رياضية مرتبطة بالجاذبية السياحية للمدينة الحمراء.", tag: "Tourisme & sport", tagAr: "السياحة والرياضة" },
+  { name: "Stade Adrar", nameAr: "ملعب أدرار", city: "Agadir", cityAr: "أكادير", detail: "Un équipement majeur pour la façade atlantique et le Souss.", detailAr: "منشأة رئيسية للواجهة الأطلسية ومنطقة سوس.", tag: "Façade atlantique", tagAr: "الواجهة الأطلسية" },
+  { name: "Stade de Fès", nameAr: "ملعب فاس", city: "Fès", cityAr: "فاس", detail: "Un ancrage sportif et culturel au cœur de la région Fès-Meknès.", detailAr: "حضور رياضي وثقافي في قلب جهة فاس مكناس.", tag: "Patrimoine & sport", tagAr: "التراث والرياضة" },
+] as const;
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -329,25 +343,30 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.documentElement.dir = direction;
+  }, [direction, language]);
+
   return (
-    <div dir={direction} className="min-h-screen bg-[#F7F5F0] text-[#17212B]">
+    <div dir={direction} className="min-h-screen bg-[#DCDCDC] text-[#1D2733]">
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "border-b border-[#e2e8f0] bg-[#fffdf9]/90 shadow-[0_10px_30px_rgba(10,19,28,0.08)] backdrop-blur-xl"
+            ? "border-b border-[#e2e8f0] bg-[#DCDCDC]/90 shadow-[0_10px_30px_rgba(10,19,28,0.08)] backdrop-blur-xl"
             : "border-b border-transparent bg-transparent"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <a href="#accueil" className="flex items-center gap-3 text-left">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#1B7A5A] text-sm font-black tracking-[-0.08em] text-white shadow-lg shadow-[#1B7A5A]/20">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0147AD] text-sm font-black tracking-[-0.08em] text-white shadow-lg shadow-[#0147AD]/20">
               B
             </div>
             <div>
-              <div className={`text-[0.7rem] font-black tracking-[0.22em] sm:text-[0.75rem] ${isScrolled ? "text-[#0B1F33]" : "text-white/90"}`}>
+              <div className={`text-[0.7rem] font-black tracking-[0.22em] sm:text-[0.75rem] ${isScrolled ? "text-[#0147AD]" : "text-white/90"}`}>
                 {currentCopy.brandShort}
               </div>
-              <div className={`text-[0.58rem] tracking-[0.18em] sm:text-[0.64rem] ${isScrolled ? "text-[#465864]" : "text-white/70"}`}>
+              <div className={`text-[0.58rem] tracking-[0.18em] sm:text-[0.64rem] ${isScrolled ? "text-[#46515C]" : "text-white/70"}`}>
                 {currentCopy.brandLong}
               </div>
             </div>
@@ -361,10 +380,10 @@ export default function Home() {
                 className={`text-sm transition-all duration-300 ${
                   item.href === "#accueil"
                     ? isScrolled
-                      ? "text-[#1B7A5A]"
-                      : "text-[#D9C67A]"
+                      ? "text-[#0147AD]"
+                      : "text-[#0147AD]"
                     : isScrolled
-                      ? "text-[#465864] hover:text-[#0B1F33]"
+                      ? "text-[#46515C] hover:text-[#0147AD]"
                       : "text-white/80 hover:text-white"
                 }`}
               >
@@ -382,9 +401,9 @@ export default function Home() {
                   onClick={() => setLanguage(option)}
                   className={`rounded-full px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.14em] transition ${
                     language === option
-                      ? "bg-[#1B7A5A] text-white shadow-sm"
+                      ? "bg-[#0147AD] text-white shadow-sm"
                       : isScrolled
-                        ? "text-[#0B1F33]/70 hover:text-[#0B1F33]"
+                        ? "text-[#0147AD]/70 hover:text-[#0147AD]"
                         : "text-white/70 hover:text-white"
                   }`}
                 >
@@ -392,7 +411,7 @@ export default function Home() {
                 </button>
               ))}
             </div>
-            <button className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition ${isScrolled ? "border-[#1B7A5A]/20 bg-[#1B7A5A] text-white hover:bg-[#176a4d]" : "border-white/20 bg-white/6 text-white hover:border-[#1B7A5A]/50 hover:bg-white/10"}`}>
+            <button className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition ${isScrolled ? "border-[#0147AD]/20 bg-[#0147AD] text-white hover:bg-[#01347E]" : "border-white/20 bg-white/6 text-white hover:border-[#0147AD]/50 hover:bg-white/10"}`}>
               {currentCopy.heroPrimary}
               <ArrowRight className="h-4 w-4" />
             </button>
@@ -406,17 +425,17 @@ export default function Home() {
                   type="button"
                   onClick={() => setLanguage(option)}
                   className={`rounded-full px-2 py-1 text-[0.58rem] font-semibold uppercase ${
-                    language === option ? "bg-[#1B7A5A] text-white" : isScrolled ? "text-[#0B1F33]/70" : "text-white/70"
+                    language === option ? "bg-[#0147AD] text-white" : isScrolled ? "text-[#0147AD]/70" : "text-white/70"
                   }`}
                 >
-                  {option}
+                  {option === "fr" ? "FR" : "AR"}
                 </button>
               ))}
             </div>
             <button
-              aria-label="Toggle menu"
+              aria-label={isArabic ? "فتح القائمة" : "Ouvrir le menu"}
               onClick={() => setIsMenuOpen((prev) => !prev)}
-              className={`inline-flex h-11 w-11 items-center justify-center rounded-full border transition ${isScrolled ? "border-[#0B1F33]/10 bg-white text-[#0B1F33]" : "border-white/20 bg-white/5 text-white hover:bg-white/10"}`}
+              className={`inline-flex h-11 w-11 items-center justify-center rounded-full border transition ${isScrolled ? "border-[#0147AD]/10 bg-white text-[#0147AD]" : "border-white/20 bg-white/5 text-white hover:bg-white/10"}`}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -430,7 +449,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.25 }}
-              className="border-t border-white/10 bg-[#0B1F33]/90 px-4 py-4 backdrop-blur-xl lg:hidden"
+              className="border-t border-white/10 bg-[#0147AD]/90 px-4 py-4 backdrop-blur-xl lg:hidden"
             >
               <div className="mx-auto flex max-w-7xl flex-col gap-3">
                 {navigation.map((item) => (
@@ -438,12 +457,12 @@ export default function Home() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-2xl border border-white/10 px-4 py-3 text-sm text-white/80 transition hover:border-[#1B7A5A]/60 hover:text-white"
+                    className="rounded-2xl border border-white/10 px-4 py-3 text-sm text-white/80 transition hover:border-[#0147AD]/60 hover:text-white"
                   >
                     {item.label}
                   </a>
                 ))}
-                <button className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#1B7A5A] px-4 py-3 text-sm font-medium text-white">
+                <button className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#0147AD] px-4 py-3 text-sm font-medium text-white">
                   {currentCopy.heroPrimary}
                   <ArrowRight className="h-4 w-4" />
                 </button>
@@ -490,7 +509,7 @@ export default function Home() {
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                   <a
                     href="#province"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C9A227] px-6 py-3.5 text-sm font-semibold text-[#0B1F33] shadow-[0_15px_30px_rgba(201,162,39,0.35)] transition hover:-translate-y-0.5"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0147AD] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_15px_30px_rgba(201,162,39,0.35)] transition hover:-translate-y-0.5"
                   >
                     {currentCopy.heroPrimary}
                     <ArrowRight className="h-4 w-4" />
@@ -512,8 +531,8 @@ export default function Home() {
               >
                 <div className="premium-card rounded-[32px] p-6 text-white">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="section-kicker">Attractivité 2026</span>
-                    <span className="rounded-full border border-[#C9A227]/30 bg-[#C9A227]/10 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-[#F4E9C5]">
+                    <span className="section-kicker">Attractivité 2030</span>
+                    <span className="rounded-full border border-[#0147AD]/30 bg-[#0147AD]/10 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-[#DCDCDC]">
                       +18.4%
                     </span>
                   </div>
@@ -522,7 +541,7 @@ export default function Home() {
                     <div className="text-[0.62rem] uppercase tracking-[0.18em] text-slate-300">Potentiel de développement</div>
                     <div className="mt-4 flex items-end gap-3">
                       <span className="text-5xl font-semibold tracking-[-0.06em] text-white">72%</span>
-                      <span className="pb-2 text-sm text-[#F4E9C5]">d'attractivité</span>
+                      <span className="pb-2 text-sm text-[#DCDCDC]">d&apos;attractivité</span>
                     </div>
                   </div>
 
@@ -534,7 +553,7 @@ export default function Home() {
                     ].map((item) => (
                       <div key={item.label} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
                         <span className="text-sm text-slate-200">{item.label}</span>
-                        <span className="text-base font-semibold text-[#F4E9C5]">{item.value}</span>
+                        <span className="text-base font-semibold text-[#DCDCDC]">{item.value}</span>
                       </div>
                     ))}
                   </div>
@@ -545,7 +564,7 @@ export default function Home() {
             <div className="mt-16 flex flex-wrap gap-6 text-sm text-slate-200/85">
               {currentCopy.heroPills.map((item) => (
                 <div key={item} className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 py-2 backdrop-blur-sm">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#C9A227] gold-pulse" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#0147AD] gold-pulse" />
                   {item}
                 </div>
               ))}
@@ -553,16 +572,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="province" className="section-shell bg-[#F7F5F0]">
+        <section id="province" className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
               <div>
                 <SectionLabel text={currentCopy.provinceLabel} />
-                <h2 className="mt-5 max-w-xl text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">{currentCopy.provinceTitle}</h2>
+                <h2 className="mt-5 max-w-xl text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">{currentCopy.provinceTitle}</h2>
                 <div className="gold-divider mt-8" />
               </div>
 
-              <div className="space-y-6 text-lg leading-8 text-[#465864]">
+              <div className="space-y-6 text-lg leading-8 text-[#46515C]">
                 <p>{currentCopy.provinceText1}</p>
                 <p>{currentCopy.provinceText2}</p>
               </div>
@@ -570,12 +589,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#EEF1F3] py-20">
+        <section className="bg-[#DCDCDC] py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 flex items-end justify-between gap-4">
               <div>
                 <SectionLabel text={isArabic ? "الإقليم" : "Territoire"} />
-                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-4xl">{currentCopy.statsTitle}</h2>
+                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-4xl">{currentCopy.statsTitle}</h2>
               </div>
               <p className="hidden max-w-md text-sm text-[#66727D] md:block">{currentCopy.statsNote}</p>
             </motion.div>
@@ -583,8 +602,8 @@ export default function Home() {
             <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {statistics.map((stat, index) => (
                 <motion.div key={stat.label} {...reveal} transition={{ ...reveal.transition, delay: index * 0.06 }} className="moroccan-card group rounded-[28px] p-6 transition duration-300 hover:-translate-y-1">
-                  <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#F4E9C5] text-[#0B1F33]">
-                    <CircleDollarSign className="h-5 w-5 text-[#C9A227]" />
+                  <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#DCDCDC] text-[#0147AD]">
+                    <CircleDollarSign className="h-5 w-5 text-[#0147AD]" />
                   </div>
                   <div className="mb-3 text-sm uppercase tracking-[0.18em] text-[#66727D]">{stat.label}</div>
                   <div className="flex items-end gap-2">
@@ -597,16 +616,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell bg-[#F7F5F0]">
+        <section className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 max-w-3xl">
               <SectionLabel text={currentCopy.positionLabel} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">{currentCopy.positionTitle}</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">{currentCopy.positionTitle}</h2>
               <p className="mt-5 text-lg text-[#66727D]">{currentCopy.positionText}</p>
             </motion.div>
 
             <motion.div {...reveal} className="moroccan-card overflow-hidden rounded-[28px] p-3 md:p-6">
-              <div className="relative h-[420px] overflow-hidden rounded-[24px] bg-[radial-gradient(circle_at_top,_#123B56,_#0B1F33_60%,_#071521_100%)]">
+              <div className="relative h-[420px] overflow-hidden rounded-[24px] bg-[radial-gradient(circle_at_top,_#01347E,_#0147AD_60%,_#01347E_100%)]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(201,162,39,0.22),transparent_26%)]" />
                 <svg viewBox="0 0 800 420" className="absolute inset-0 h-full w-full">
                   <path d="M110 250 C 200 210, 247 145, 310 120 S 470 84, 575 145 S 710 210, 740 250" fill="none" stroke="rgba(201,162,39,0.6)" strokeWidth="3" strokeDasharray="10 12" />
@@ -614,18 +633,18 @@ export default function Home() {
                   <path d="M220 130 L 510 60 L 640 100" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="2" />
                 </svg>
 
-                <motion.div animate={{ scale: [1, 1.12, 1], opacity: [0.8, 1, 0.8] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[38%] top-[43%] flex h-5 w-5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#C9A227] shadow-[0_0_0_12px_rgba(201,162,39,0.22)]">
+                <motion.div animate={{ scale: [1, 1.12, 1], opacity: [0.8, 1, 0.8] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[38%] top-[43%] flex h-5 w-5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#0147AD] shadow-[0_0_0_12px_rgba(201,162,39,0.22)]">
                   <span className="h-2 w-2 rounded-full bg-white" />
                 </motion.div>
 
-                <div className="absolute left-[32%] top-[18%] rounded-full border border-[#C9A227]/60 bg-[#0B1F33]/80 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/85">Benslimane</div>
-                <div className="absolute left-[18%] top-[62%] rounded-full border border-white/10 bg-[#0B1F33]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Bouznika</div>
-                <div className="absolute left-[52%] top-[18%] rounded-full border border-white/10 bg-[#0B1F33]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Mohammedia</div>
-                <div className="absolute left-[67%] top-[32%] rounded-full border border-white/10 bg-[#0B1F33]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Casablanca</div>
-                <div className="absolute left-[66%] top-[72%] rounded-full border border-white/10 bg-[#0B1F33]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Rabat</div>
+                <div className="absolute left-[32%] top-[18%] rounded-full border border-[#0147AD]/60 bg-[#0147AD]/80 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/85">Benslimane</div>
+                <div className="absolute left-[18%] top-[62%] rounded-full border border-white/10 bg-[#0147AD]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Bouznika</div>
+                <div className="absolute left-[52%] top-[18%] rounded-full border border-white/10 bg-[#0147AD]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Mohammedia</div>
+                <div className="absolute left-[67%] top-[32%] rounded-full border border-white/10 bg-[#0147AD]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Casablanca</div>
+                <div className="absolute left-[66%] top-[72%] rounded-full border border-white/10 bg-[#0147AD]/70 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-white/70">Rabat</div>
 
-                <div className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-[#071521]/60 p-5 backdrop-blur-md">
-                  <p className="text-sm uppercase tracking-[0.2em] text-[#C9A227]">{isArabic ? "الموضع الاستراتيجي" : "Positionnement stratégique"}</p>
+                <div className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-[#01347E]/60 p-5 backdrop-blur-md">
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#0147AD]">{isArabic ? "الموضع الاستراتيجي" : "Positionnement stratégique"}</p>
                   <p className="mt-2 max-w-2xl text-base text-slate-200 md:text-lg">{isArabic ? "تتمتع بن سليمان بقرب استراتيجي من المحاور الاقتصادية الكبرى في المملكة والممرات اللوجستية ومناطق التنمية عالية الديناميكية." : "Benslimane bénéficie d'une proximité avantageuse avec les grands centres économiques du Royaume, des corridors logistiques et des zones de développement à forte dynamique."}</p>
                 </div>
               </div>
@@ -633,28 +652,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="investir" className="section-shell bg-[#F7F5F0]">
+        <section id="investir" className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-14 max-w-3xl">
               <SectionLabel text={currentCopy.investLabel} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">{currentCopy.investTitle}</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">{currentCopy.investTitle}</h2>
             </motion.div>
 
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {investmentCards.map((card, index) => {
                 const Icon = iconMap[card.icon];
                 return (
-                  <motion.div key={card.title} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -6 }} className="group relative overflow-hidden rounded-[28px] border border-[#0B1F33]/8 bg-white p-6 shadow-[0_16px_40px_rgba(10,19,28,0.05)] transition-all duration-300">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#C9A227] via-[#C9A227]/60 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
-                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F4E9C5] text-[#0B1F33] transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-                      <Icon className="h-5 w-5 text-[#C9A227]" />
+                  <motion.div key={card.title} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -6 }} className="group relative overflow-hidden rounded-[28px] border border-[#0147AD]/8 bg-white p-6 shadow-[0_16px_40px_rgba(10,19,28,0.05)] transition-all duration-300">
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0147AD] via-[#0147AD]/60 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#DCDCDC] text-[#0147AD] transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                      <Icon className="h-5 w-5 text-[#0147AD]" />
                     </div>
                     <div className="text-[0.62rem] uppercase tracking-[0.2em] text-[#66727D]">{isArabic ? card.noteAr : card.note}</div>
-                    <h3 className="mt-4 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">{isArabic ? card.titleAr : card.title}</h3>
-                    <p className="mt-4 text-base leading-7 text-[#465864]">{isArabic ? card.descriptionAr : card.description}</p>
-                    <div className="mt-8 flex items-center justify-between border-t border-[#0B1F33]/8 pt-4">
+                    <h3 className="mt-4 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? card.titleAr : card.title}</h3>
+                    <p className="mt-4 text-base leading-7 text-[#46515C]">{isArabic ? card.descriptionAr : card.description}</p>
+                    <div className="mt-8 flex items-center justify-between border-t border-[#0147AD]/8 pt-4">
                       <span className="text-sm text-[#66727D]">{currentCopy.investDiscover}</span>
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0B1F33] text-white transition group-hover:bg-[#C9A227] group-hover:text-[#0B1F33]">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0147AD] text-white transition group-hover:bg-[#0147AD] group-hover:text-[#0147AD]">
                         <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
@@ -665,21 +684,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#EEF1F3] py-20">
+        <section className="bg-[#DCDCDC] py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12">
               <SectionLabel text={currentCopy.sectorsLabel} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">{currentCopy.sectorsTitle}</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">{currentCopy.sectorsTitle}</h2>
             </motion.div>
 
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {sectors.map((sector, index) => (
-                <motion.div key={sector.number} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -4 }} className="group relative overflow-hidden rounded-[26px] border border-[#0B1F33]/8 bg-white p-6 shadow-[0_16px_36px_rgba(10,19,28,0.04)]">
+                <motion.div key={sector.number} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -4 }} className="group relative overflow-hidden rounded-[26px] border border-[#0147AD]/8 bg-white p-6 shadow-[0_16px_36px_rgba(10,19,28,0.04)]">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,162,39,0.08),_transparent_58%)] opacity-0 transition duration-500 group-hover:opacity-100" />
                   <div className="relative">
-                    <div className="text-lg font-semibold tracking-[-0.05em] text-[#C9A227] transition group-hover:text-[#0B1F33]">{sector.number}</div>
-                    <h3 className="mt-6 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">{isArabic ? sector.titleAr : sector.title}</h3>
-                    <p className="mt-4 text-base leading-7 text-[#465864]">{isArabic ? sector.descriptionAr : sector.description}</p>
+                    <div className="text-lg font-semibold tracking-[-0.05em] text-[#0147AD] transition group-hover:text-[#0147AD]">{sector.number}</div>
+                    <h3 className="mt-6 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? sector.titleAr : sector.title}</h3>
+                    <p className="mt-4 text-base leading-7 text-[#46515C]">{isArabic ? sector.descriptionAr : sector.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -687,11 +706,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="donnees" className="section-shell bg-[#F7F5F0]">
+        <section id="donnees" className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 max-w-3xl">
               <SectionLabel text={currentCopy.dataLabel} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">{currentCopy.dataTitle}</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">{currentCopy.dataTitle}</h2>
               <p className="mt-5 text-lg text-[#66727D]">{currentCopy.dataText}</p>
             </motion.div>
             <div className="grid gap-6 xl:grid-cols-2">
@@ -699,24 +718,24 @@ export default function Home() {
                 <div className="mb-4 flex items-center justify-between gap-4">
                   <div>
                     <div className="text-[0.6rem] uppercase tracking-[0.18em] text-[#66727D]">{isArabic ? "تطور الإقليم" : "Évolution territoriale"}</div>
-                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">{isArabic ? "الديناميكية السكانية" : "Dynamique démographique"}</h3>
+                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? "الديناميكية السكانية" : "Dynamique démographique"}</h3>
                   </div>
-                  <BarChart3 className="h-6 w-6 text-[#C9A227]" />
+                  <BarChart3 className="h-6 w-6 text-[#0147AD]" />
                 </div>
                 <div className="h-[260px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={dashboardSeries}>
                       <defs>
                         <linearGradient id="areaMain" x1="0" x2="0" y1="0" y2="1">
-                          <stop offset="0%" stopColor="#C9A227" stopOpacity={0.5} />
-                          <stop offset="100%" stopColor="#C9A227" stopOpacity={0.05} />
+                          <stop offset="0%" stopColor="#0147AD" stopOpacity={0.5} />
+                          <stop offset="100%" stopColor="#0147AD" stopOpacity={0.05} />
                         </linearGradient>
                       </defs>
                       <CartesianGrid stroke="#dfe5ea" vertical={false} />
                       <XAxis dataKey="name" stroke="#66727D" tickLine={false} axisLine={false} />
                       <YAxis stroke="#66727D" tickLine={false} axisLine={false} />
                       <Tooltip />
-                      <Area type="monotone" dataKey="population" stroke="#0B1F33" fill="url(#areaMain)" strokeWidth={3} />
+                      <Area type="monotone" dataKey="population" stroke="#0147AD" fill="url(#areaMain)" strokeWidth={3} />
                     </AreaChart>
                   </ResponsiveContainer>
                 </div>
@@ -726,9 +745,9 @@ export default function Home() {
                 <div className="mb-4 flex items-center justify-between gap-4">
                   <div>
                     <div className="text-[0.6rem] uppercase tracking-[0.18em] text-[#66727D]">{isArabic ? "الهيكل الاقتصادي" : "Structure économique"}</div>
-                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">{isArabic ? "التوزيع القطاعي" : "Répartition sectorielle"}</h3>
+                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? "التوزيع القطاعي" : "Répartition sectorielle"}</h3>
                   </div>
-                  <Compass className="h-6 w-6 text-[#C9A227]" />
+                  <Compass className="h-6 w-6 text-[#0147AD]" />
                 </div>
                 <div className="h-[260px]">
                   <ResponsiveContainer width="100%" height="100%">
@@ -748,9 +767,9 @@ export default function Home() {
                 <div className="mb-4 flex items-center gap-4">
                   <div>
                     <div className="text-[0.6rem] uppercase tracking-[0.18em] text-[#66727D]">{isArabic ? "الاتجاهات" : "Tendances"}</div>
-                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">Capacité d’investissement et d’emploi</h3>
+                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">Capacité d’investissement et d’emploi</h3>
                   </div>
-                  <ShieldCheck className="h-6 w-6 text-[#C9A227]" />
+                  <ShieldCheck className="h-6 w-6 text-[#0147AD]" />
                 </div>
                 <div className="h-[280px]">
                   <ResponsiveContainer width="100%" height="100%">
@@ -759,8 +778,8 @@ export default function Home() {
                       <XAxis dataKey="name" stroke="#66727D" tickLine={false} axisLine={false} />
                       <YAxis stroke="#66727D" tickLine={false} axisLine={false} />
                       <Tooltip />
-                      <Bar dataKey="emploi" fill="#0B1F33" radius={[6, 6, 0, 0]} />
-                      <Bar dataKey="investissement" fill="#C9A227" radius={[6, 6, 0, 0]} />
+                      <Bar dataKey="emploi" fill="#0147AD" radius={[6, 6, 0, 0]} />
+                      <Bar dataKey="investissement" fill="#0147AD" radius={[6, 6, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -769,11 +788,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projets" className="section-shell bg-[#EEF1F3]">
+        <section id="projets" className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 max-w-3xl">
               <SectionLabel text={isArabic ? "المشاريع" : "Projets"} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
                 {isArabic ? "مشاريع بنيوية" : "Projets structurants"}
               </h2>
             </motion.div>
@@ -793,11 +812,11 @@ export default function Home() {
                       alt={project.title}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#071521]/90 via-[#071521]/25 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#01347E]/90 via-[#01347E]/25 to-transparent" />
                   </div>
 
-                  <div className="absolute inset-x-4 bottom-4 rounded-[22px] border border-white/12 bg-[#0B1F33]/70 p-5 backdrop-blur-lg transition duration-300 group-hover:-translate-y-1">
-                    <div className="text-[0.6rem] uppercase tracking-[0.18em] text-[#C9A227]">{isArabic ? project.categoryAr : project.category}</div>
+                  <div className="absolute inset-x-4 bottom-4 rounded-[22px] border border-white/12 bg-[#0147AD]/70 p-5 backdrop-blur-lg transition duration-300 group-hover:-translate-y-1">
+                    <div className="text-[0.6rem] uppercase tracking-[0.18em] text-[#0147AD]">{isArabic ? project.categoryAr : project.category}</div>
                     <div className="mt-3 flex items-center justify-between gap-3">
                       <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white">{isArabic ? project.titleAr : project.title}</h3>
                       <span className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1.5 text-[0.58rem] uppercase tracking-[0.12em] text-white/80">
@@ -805,7 +824,7 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="mt-3 flex items-center gap-2 text-sm text-slate-200/80">
-                      <MapPinned className="h-4 w-4 text-[#C9A227]" />
+                      <MapPinned className="h-4 w-4 text-[#0147AD]" />
                       {isArabic ? project.locationAr : project.location}
                     </div>
                     <p className="mt-4 text-base leading-7 text-slate-200/80">{isArabic ? project.impactAr : project.impact}</p>
@@ -816,7 +835,36 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="vision" className="relative overflow-hidden bg-[#071521] py-24 text-white">
+        <section id="stades-2030" className="section-shell bg-[#DCDCDC]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...reveal} className="mb-12 max-w-3xl">
+              <SectionLabel text={isArabic ? "كأس العالم 2030" : "Coupe du Monde 2030"} />
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
+                {isArabic ? "ملاعب المغرب في أفق 2030" : "Les stades du Maroc à l’horizon 2030"}
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[#46515C]">
+                {isArabic ? "تستعد المملكة لاستقبال العالم عبر شبكة من المنشآت الرياضية الكبرى في مختلف المدن المغربية." : "Le Maroc prépare une expérience mondiale à travers un réseau d’enceintes sportives majeures dans plusieurs villes du Royaume."}
+              </p>
+            </motion.div>
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {moroccoStadiums.map((stadium, index) => (
+                <motion.article key={stadium.name} {...reveal} transition={{ ...reveal.transition, delay: index * 0.05 }} className="group relative overflow-hidden rounded-[28px] border border-[#0147AD]/12 bg-white p-6 shadow-[0_16px_40px_rgba(1,71,173,0.08)] transition duration-300 hover:-translate-y-1">
+                  <div className="absolute inset-x-0 top-0 h-1 bg-[#0147AD]" />
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#DCDCDC] text-[#0147AD]"><Trophy className="h-5 w-5" /></div>
+                    <span className="rounded-full bg-[#DCDCDC] px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-[#0147AD]">{isArabic ? stadium.tagAr : stadium.tag}</span>
+                  </div>
+                  <h3 className="mt-7 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? stadium.nameAr : stadium.name}</h3>
+                  <div className="mt-3 flex items-center gap-2 text-sm font-medium text-[#46515C]"><MapPinned className="h-4 w-4 text-[#0147AD]" />{isArabic ? stadium.cityAr : stadium.city}</div>
+                  <p className="mt-5 text-base leading-7 text-[#46515C]">{isArabic ? stadium.detailAr : stadium.detail}</p>
+                </motion.article>
+              ))}
+            </div>
+            <p className="mt-8 text-xs leading-6 text-[#46515C]">{isArabic ? "قائمة تعريفية بالملاعب المرشحة ضمن تحضيرات المغرب لكأس العالم 2030؛ تُحدّث المعلومات وفق الإعلانات الرسمية." : "Sélection indicative des enceintes mobilisées dans les préparatifs du Maroc pour 2030 ; les informations seront actualisées selon les annonces officielles."}</p>
+          </div>
+        </section>
+
+        <section id="vision" className="relative overflow-hidden bg-[#01347E] py-24 text-white">
           <div className="grid-surface absolute inset-0 opacity-60" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,162,39,0.16),_transparent_40%)]" />
 
@@ -829,7 +877,7 @@ export default function Home() {
             </motion.div>
 
             <div className="relative mt-12 grid gap-8 md:grid-cols-3">
-              <div className="absolute left-1/2 top-6 hidden h-24 w-px -translate-x-1/2 bg-gradient-to-b from-[#C9A227] to-transparent md:block" />
+              <div className="absolute left-1/2 top-6 hidden h-24 w-px -translate-x-1/2 bg-gradient-to-b from-[#0147AD] to-transparent md:block" />
               {[
                 {
                   title: isArabic ? "الجاذبية" : "Attractivité",
@@ -850,11 +898,11 @@ export default function Home() {
                   transition={{ ...reveal.transition, delay: index * 0.06 }}
                   className="relative rounded-[28px] border border-white/10 bg-white/4 p-6 backdrop-blur-sm"
                 >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#C9A227]/12 text-[#C9A227]">
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#0147AD]/12 text-[#0147AD]">
                     <span className="text-sm font-bold">{index + 1}</span>
                   </div>
                   <h3 className="text-2xl font-semibold tracking-[-0.05em] text-white">{pillar.title}</h3>
-                  <div className="my-5 h-px w-12 bg-gradient-to-r from-[#C9A227] to-transparent" />
+                  <div className="my-5 h-px w-12 bg-gradient-to-r from-[#0147AD] to-transparent" />
                   <p className="text-base leading-7 text-slate-200">{pillar.text}</p>
                 </motion.div>
               ))}
@@ -862,11 +910,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell bg-[#F7F5F0]">
+        <section className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 max-w-3xl">
               <SectionLabel text={isArabic ? "المكتب الاستشاري" : "Le bureau d'études"} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
                 {isArabic ? "خبرة تخدم الإقليم." : "Une expertise au service du territoire."}
               </h2>
             </motion.div>
@@ -875,11 +923,11 @@ export default function Home() {
               <motion.div {...reveal} className="moroccan-card rounded-[30px] p-6 md:p-8">
                 <div className="grid gap-4 sm:grid-cols-2">
                   {bureauServices.map((service) => (
-                    <div key={service.fr} className="flex items-start gap-3 rounded-2xl border border-[#0B1F33]/8 bg-[#F8FAFB] p-4">
-                      <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#F4E9C5] text-[#C9A227]">
+                    <div key={service.fr} className="flex items-start gap-3 rounded-2xl border border-[#0147AD]/8 bg-[#E8E8E8] p-4">
+                      <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#DCDCDC] text-[#0147AD]">
                         <ArrowRight className="h-3.5 w-3.5" />
                       </span>
-                      <span className="text-base font-medium text-[#17212B]">{isArabic ? service.ar : service.fr}</span>
+                      <span className="text-base font-medium text-[#1D2733]">{isArabic ? service.ar : service.fr}</span>
                     </div>
                   ))}
                 </div>
@@ -889,12 +937,12 @@ export default function Home() {
                 {processSteps.map((step) => (
                   <div key={step.number} className="moroccan-card rounded-[24px] p-5">
                     <div className="flex items-center gap-5">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0B1F33] text-lg font-semibold text-white">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0147AD] text-lg font-semibold text-white">
                         {step.number}
                       </div>
                       <div>
-                        <div className="text-xl font-semibold tracking-[-0.05em] text-[#0B1F33]">{isArabic ? step.titleAr : step.title}</div>
-                        <p className="mt-1 text-base leading-7 text-[#465864]">{isArabic ? step.descriptionAr : step.description}</p>
+                        <div className="text-xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? step.titleAr : step.title}</div>
+                        <p className="mt-1 text-base leading-7 text-[#46515C]">{isArabic ? step.descriptionAr : step.description}</p>
                       </div>
                     </div>
                   </div>
@@ -904,32 +952,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell bg-[#EEF1F3]">
+        <section className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-              <div className="overflow-hidden rounded-[30px] border border-[#0B1F33]/8 bg-white shadow-[0_20px_50px_rgba(11,31,51,0.08)]">
+              <div className="overflow-hidden rounded-[30px] border border-[#0147AD]/8 bg-white shadow-[0_20px_50px_rgba(11,31,51,0.08)]">
                 <div className="relative h-[520px] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
                     alt="Portrait placeholder"
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071521]/55 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#01347E]/55 via-transparent to-transparent" />
 
                 </div>
               </div>
 
               <div>
                 <SectionLabel text={isArabic ? "رؤية عامة" : "Vision publique"} />
-                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
                   {isArabic ? "رؤية من أجل الإقليم" : "Une vision pour le territoire"}
                 </h2>
-                <div className="mt-8 rounded-[26px] border border-[#0B1F33]/8 bg-white p-6 shadow-[0_20px_50px_rgba(11,31,51,0.04)]">
+                <div className="mt-8 rounded-[26px] border border-[#0147AD]/8 bg-white p-6 shadow-[0_20px_50px_rgba(11,31,51,0.04)]">
                   <div className="text-[0.62rem] uppercase tracking-[0.2em] text-[#66727D]">{currentCopy.candidateLabel}</div>
-                  <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-[#0B1F33]">{publicFigure.name}</h3>
-                  <p className="mt-2 text-[#123B56]">{publicFigure.role}</p>
-                  <p className="mt-6 text-lg leading-8 text-[#465864]">{publicFigure.intro}</p>
-                  <p className="mt-5 text-base leading-7 text-[#465864]">{publicFigure.background}</p>
+                  <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-[#0147AD]">{publicFigure.name}</h3>
+                  <p className="mt-2 text-[#01347E]">{publicFigure.role}</p>
+                  <p className="mt-6 text-lg leading-8 text-[#46515C]">{publicFigure.intro}</p>
+                  <p className="mt-5 text-base leading-7 text-[#46515C]">{publicFigure.background}</p>
 
                 </div>
               </div>
@@ -937,16 +985,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell bg-[#F7F5F0]">
+        <section className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 flex items-end justify-between gap-4">
               <div>
                 <SectionLabel text={isArabic ? "التحليل والأخبار" : "Analyses & actualités"} />
-                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
                   {isArabic ? "التحليل والأخبار" : "Analyses & actualités"}
                 </h2>
               </div>
-              <a href="#contact" className="hidden items-center gap-2 text-sm font-semibold text-[#0B1F33] md:inline-flex">
+              <a href="#contact" className="hidden items-center gap-2 text-sm font-semibold text-[#0147AD] md:inline-flex">
                 {isArabic ? "عرض جميع التحليلات" : "Voir toutes les analyses"}
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -958,18 +1006,18 @@ export default function Home() {
                   key={article.title}
                   {...reveal}
                   transition={{ ...reveal.transition, delay: index * 0.05 }}
-                  className="group overflow-hidden rounded-[28px] border border-[#0B1F33]/8 bg-white shadow-[0_18px_42px_rgba(11,31,51,0.04)] transition duration-300 hover:-translate-y-1"
+                  className="group overflow-hidden rounded-[28px] border border-[#0147AD]/8 bg-white shadow-[0_18px_42px_rgba(11,31,51,0.04)] transition duration-300 hover:-translate-y-1"
                 >
                   <div className="p-6">
                     <div className="flex items-center justify-between gap-4 text-[0.6rem] uppercase tracking-[0.18em] text-[#66727D]">
                       <span>{article.category}</span>
                       <span>{article.date}</span>
                     </div>
-                    <h3 className="mt-5 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">{article.title}</h3>
-                    <p className="mt-4 text-base leading-7 text-[#465864]">{article.description}</p>
-                    <div className="mt-7 flex items-center justify-between border-t border-[#0B1F33]/8 pt-4">
-                      <span className="text-sm font-medium text-[#0B1F33]">{isArabic ? "اقرأ المقال" : "Lire l'article"}</span>
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#F4E9C5] text-[#0B1F33] transition group-hover:bg-[#0B1F33] group-hover:text-white">
+                    <h3 className="mt-5 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{article.title}</h3>
+                    <p className="mt-4 text-base leading-7 text-[#46515C]">{article.description}</p>
+                    <div className="mt-7 flex items-center justify-between border-t border-[#0147AD]/8 pt-4">
+                      <span className="text-sm font-medium text-[#0147AD]">{isArabic ? "اقرأ المقال" : "Lire l'article"}</span>
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#DCDCDC] text-[#0147AD] transition group-hover:bg-[#0147AD] group-hover:text-white">
                         <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
@@ -980,11 +1028,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="blog" className="section-shell bg-[#EEF1F3]">
+        <section id="blog" className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12">
               <SectionLabel text={isArabic ? "المدونة" : "Blog"} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
                 {isArabic ? "آخر الأخبار والمقالات" : "Actualités et analyses"}
               </h2>
             </motion.div>
@@ -995,30 +1043,30 @@ export default function Home() {
                   key={article.id}
                   {...reveal}
                   transition={{ ...reveal.transition, delay: index * 0.04 }}
-                  className="group overflow-hidden rounded-[28px] border border-[#0B1F33]/8 bg-white shadow-[0_18px_42px_rgba(11,31,51,0.04)] transition duration-300 hover:-translate-y-2"
+                  className="group overflow-hidden rounded-[28px] border border-[#0147AD]/8 bg-white shadow-[0_18px_42px_rgba(11,31,51,0.04)] transition duration-300 hover:-translate-y-2"
                 >
-                  <div className="relative h-[200px] overflow-hidden bg-gradient-to-br from-[#C9A227]/10 to-[#0B1F33]/5">
+                  <div className="relative h-[200px] overflow-hidden bg-gradient-to-br from-[#0147AD]/10 to-[#0147AD]/5">
                     <img
                       src={article.image}
                       alt={article.title}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F33]/40 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0147AD]/40 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center justify-between text-[0.58rem] uppercase tracking-[0.16em]">
-                      <span className="text-[#C9A227]">{article.category}</span>
+                      <span className="text-[#0147AD]">{article.category}</span>
                       <span className="text-[#66727D]">{article.date}</span>
                     </div>
-                    <h3 className="mt-4 text-lg font-semibold tracking-[-0.04em] text-[#0B1F33] line-clamp-2">
+                    <h3 className="mt-4 text-lg font-semibold tracking-[-0.04em] text-[#0147AD] line-clamp-2">
                       {article.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-[#465864] line-clamp-2">{article.excerpt}</p>
-                    <div className="mt-5 flex items-center justify-between border-t border-[#0B1F33]/8 pt-4">
-                      <span className="text-sm font-medium text-[#0B1F33]">
+                    <p className="mt-3 text-sm leading-6 text-[#46515C] line-clamp-2">{article.excerpt}</p>
+                    <div className="mt-5 flex items-center justify-between border-t border-[#0147AD]/8 pt-4">
+                      <span className="text-sm font-medium text-[#0147AD]">
                         {isArabic ? "اقرأ المقال" : "Lire"}
                       </span>
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#F4E9C5] text-[#0B1F33] transition group-hover:bg-[#0B1F33] group-hover:text-white">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#DCDCDC] text-[#0147AD] transition group-hover:bg-[#0147AD] group-hover:text-white">
                         <ArrowRight className="h-3.5 w-3.5" />
                       </span>
                     </div>
@@ -1029,11 +1077,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="partenariats" className="section-shell bg-[#F7F5F0]">
+        <section id="partenariats" className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 max-w-3xl">
               <SectionLabel text={isArabic ? "الشراكات" : "Partenariats"} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
                 {isArabic ? "شركاء استراتيجيون" : "Nos partenaires stratégiques"}
               </h2>
               <p className="mt-5 text-lg text-[#66727D]">
@@ -1048,16 +1096,16 @@ export default function Home() {
                   {...reveal}
                   transition={{ ...reveal.transition, delay: index * 0.05 }}
                   whileHover={{ y: -6 }}
-                  className="group rounded-[28px] border border-[#0B1F33]/8 bg-white p-6 shadow-[0_16px_40px_rgba(11,31,51,0.05)] transition-all duration-300"
+                  className="group rounded-[28px] border border-[#0147AD]/8 bg-white p-6 shadow-[0_16px_40px_rgba(11,31,51,0.05)] transition-all duration-300"
                 >
                   <div className="mb-4 text-5xl">{partner.logo}</div>
-                  <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#C9A227]">{partner.status}</div>
-                  <h3 className="mt-3 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">
+                  <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">{partner.status}</div>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">
                     {partner.name}
                   </h3>
                   <p className="mt-2 text-sm font-medium text-[#66727D]">{partner.sector}</p>
-                  <p className="mt-4 text-base leading-7 text-[#465864]">{partner.description}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#F4E9C5] px-3 py-1.5 text-sm font-medium text-[#0B1F33]">
+                  <p className="mt-4 text-base leading-7 text-[#46515C]">{partner.description}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#DCDCDC] px-3 py-1.5 text-sm font-medium text-[#0147AD]">
                     {isArabic ? "تعرف أكثر" : "En savoir plus"}
                     <ArrowRight className="h-3.5 w-3.5" />
                   </div>
@@ -1067,11 +1115,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="recrutement" className="section-shell bg-[#EEF1F3]">
+        <section id="recrutement" className="section-shell bg-[#DCDCDC]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 max-w-3xl">
               <SectionLabel text={isArabic ? "الوظائف" : "Recrutement"} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0B1F33] md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#0147AD] md:text-5xl">
                 {isArabic ? "انضم إلى فريقنا" : "Rejoignez notre équipe"}
               </h2>
               <p className="mt-5 text-lg text-[#66727D]">
@@ -1086,16 +1134,16 @@ export default function Home() {
                   {...reveal}
                   transition={{ ...reveal.transition, delay: index * 0.05 }}
                   whileHover={{ y: -4 }}
-                  className="group rounded-[28px] border border-[#0B1F33]/8 bg-white p-7 shadow-[0_16px_40px_rgba(11,31,51,0.05)] transition-all duration-300"
+                  className="group rounded-[28px] border border-[#0147AD]/8 bg-white p-7 shadow-[0_16px_40px_rgba(11,31,51,0.05)] transition-all duration-300"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#C9A227]">{position.department}</div>
-                      <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0B1F33]">
+                      <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">{position.department}</div>
+                      <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">
                         {position.title}
                       </h3>
                     </div>
-                    <span className="rounded-full bg-[#C9A227]/10 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-[#C9A227]">
+                    <span className="rounded-full bg-[#0147AD]/10 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-[#0147AD]">
                       {position.type}
                     </span>
                   </div>
@@ -1105,12 +1153,12 @@ export default function Home() {
                     {position.location}
                   </div>
 
-                  <p className="mt-4 text-base leading-7 text-[#465864]">{position.description}</p>
+                  <p className="mt-4 text-base leading-7 text-[#46515C]">{position.description}</p>
 
                   <div className="mt-6 flex items-center gap-3">
                     <a
                       href={`#contact?position=${position.id}`}
-                      className="inline-flex items-center gap-2 rounded-full bg-[#0B1F33] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#123B56]"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#0147AD] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#01347E]"
                     >
                       {isArabic ? "تقدم الآن" : "Candidater"}
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -1122,7 +1170,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="relative overflow-hidden bg-[#0B1F33] py-20 text-white">
+        <section id="contact" className="relative overflow-hidden bg-[#0147AD] py-20 text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(201,162,39,0.18),transparent_30%)]" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
@@ -1139,32 +1187,32 @@ export default function Home() {
 
                 <div className="mt-8 space-y-4 md:mt-12">
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#C9A227]">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">
                       {isArabic ? "البريد الإلكتروني" : "Email"}
                     </div>
-                    <a href={`mailto:${contactInfo.email}`} className="mt-2 text-lg font-semibold text-white hover:text-[#C9A227] transition">
+                    <a href={`mailto:${contactInfo.email}`} className="mt-2 text-lg font-semibold text-white hover:text-[#0147AD] transition">
                       {contactInfo.email}
                     </a>
                   </div>
 
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#C9A227]">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">
                       {isArabic ? "الهاتف" : "Téléphone"}
                     </div>
-                    <a href={`tel:${contactInfo.phone}`} className="mt-2 text-lg font-semibold text-white hover:text-[#C9A227] transition">
+                    <a href={`tel:${contactInfo.phone}`} className="mt-2 text-lg font-semibold text-white hover:text-[#0147AD] transition">
                       {contactInfo.phone}
                     </a>
                   </div>
 
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#C9A227]">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">
                       {isArabic ? "العنوان" : "Adresse"}
                     </div>
                     <p className="mt-2 text-base text-slate-200">{contactInfo.address}</p>
                   </div>
 
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#C9A227] mb-4">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD] mb-4">
                       {isArabic ? "تابعنا على وسائل التواصل" : "Suivez nous"}
                     </div>
                     <div className="flex gap-3">
@@ -1172,7 +1220,7 @@ export default function Home() {
                         <a
                           key={social.platform}
                           href={social.url}
-                          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-sm font-medium text-white transition hover:bg-[#C9A227] hover:text-[#0B1F33] hover:border-[#C9A227]"
+                          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-sm font-medium text-white transition hover:bg-[#DCDCDC] hover:text-[#0147AD] hover:border-[#0147AD]"
                         >
                           {social.platform[0]}
                         </a>
@@ -1194,7 +1242,7 @@ export default function Home() {
                     </label>
                     <input
                       type="text"
-                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#C9A227] focus:outline-none focus:bg-white/12"
+                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#0147AD] focus:outline-none focus:bg-white/12"
                       placeholder={isArabic ? "أدخل اسمك الكامل" : "Votre nom"}
                     />
                   </div>
@@ -1205,7 +1253,7 @@ export default function Home() {
                     </label>
                     <input
                       type="email"
-                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#C9A227] focus:outline-none focus:bg-white/12"
+                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#0147AD] focus:outline-none focus:bg-white/12"
                       placeholder={isArabic ? "بريدك الإلكتروني" : "votre@email.com"}
                     />
                   </div>
@@ -1216,7 +1264,7 @@ export default function Home() {
                     </label>
                     <input
                       type="text"
-                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#C9A227] focus:outline-none focus:bg-white/12"
+                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#0147AD] focus:outline-none focus:bg-white/12"
                       placeholder={isArabic ? "موضوع الرسالة" : "Sujet du message"}
                     />
                   </div>
@@ -1227,14 +1275,14 @@ export default function Home() {
                     </label>
                     <textarea
                       rows={4}
-                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#C9A227] focus:outline-none focus:bg-white/12 resize-none"
+                      className="w-full rounded-[16px] border border-white/15 bg-white/8 px-4 py-3 text-white placeholder-slate-400 transition duration-300 focus:border-[#0147AD] focus:outline-none focus:bg-white/12 resize-none"
                       placeholder={isArabic ? "اكتب رسالتك هنا..." : "Votre message..."}
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-[#C9A227] px-6 py-3.5 text-sm font-semibold text-[#0B1F33] transition hover:bg-[#D9C660] hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                    className="w-full rounded-full bg-[#0147AD] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#0147AD] hover:-translate-y-0.5 flex items-center justify-center gap-2"
                   >
                     {isArabic ? "إرسال الرسالة" : "Envoyer"}
                     <ArrowRight className="h-4 w-4" />
@@ -1246,12 +1294,12 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-[#071521] text-white">
+      <footer className="bg-[#01347E] text-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
             <div>
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0B1F33] text-lg font-black tracking-[-0.08em] text-white border border-white/10">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0147AD] text-lg font-black tracking-[-0.08em] text-white border border-white/10">
                   B
                 </div>
                 <div>
@@ -1269,7 +1317,7 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="text-[0.62rem] uppercase tracking-[0.18em] text-[#C9A227]">{isArabic ? "التنقل" : "Navigation"}</div>
+              <div className="text-[0.62rem] uppercase tracking-[0.18em] text-[#0147AD]">{isArabic ? "التنقل" : "Navigation"}</div>
               <ul className="mt-5 space-y-3 text-sm text-slate-300">
                 {navigation.map((item) => (
                   <li key={item.href}>
@@ -1280,7 +1328,7 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="text-[0.62rem] uppercase tracking-[0.18em] text-[#C9A227]">{isArabic ? "الاستثمار" : "Investissement"}</div>
+              <div className="text-[0.62rem] uppercase tracking-[0.18em] text-[#0147AD]">{isArabic ? "الاستثمار" : "Investissement"}</div>
               <ul className="mt-5 space-y-3 text-sm text-slate-300">
                 {footerLinks.investment.map((item) => (
                   <li key={item.label}>
@@ -1291,7 +1339,7 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="text-[0.62rem] uppercase tracking-[0.18em] text-[#C9A227]">{isArabic ? "تواصل" : "Contact"}</div>
+              <div className="text-[0.62rem] uppercase tracking-[0.18em] text-[#0147AD]">{isArabic ? "تواصل" : "Contact"}</div>
               <ul className="mt-5 space-y-3 text-sm text-slate-300">
                 <li>contact@benslimane-province.ma</li>
                 <li>{isArabic ? "إقليم بن سليمان" : "Province de Benslimane"}</li>
@@ -1322,7 +1370,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 12 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#0B1F33] text-white shadow-[0_10px_30px_rgba(11,31,51,0.25)] transition hover:bg-[#123B56]"
+            className="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#0147AD] text-white shadow-[0_10px_30px_rgba(11,31,51,0.25)] transition hover:bg-[#01347E]"
             aria-label="Retour en haut"
           >
             <ArrowUp className="h-4 w-4" />
