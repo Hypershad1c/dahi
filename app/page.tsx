@@ -297,12 +297,12 @@ function useTextDirection(language: Language) {
 
 
 const moroccoStadiums = [
-  { name: "Grand Stade Hassan II", nameAr: "الملعب الكبير الحسن الثاني", city: "Benslimane", cityAr: "بن سليمان", capacity: "115 000", status: "En chantier", statusAr: "قيد الإنجاز", image: "/stadiums/hassan-ii.jpg", detail: "Le chantier phare : une enceinte conçue pour devenir l’un des grands symboles de 2030.", detailAr: "المشروع الأبرز: منشأة مرشحة لتصبح أحد رموز مونديال 2030.", tag: "Projet majeur", tagAr: "مشروع كبير" },
-  { name: "Complexe sportif Prince Moulay Abdellah", nameAr: "المجمع الرياضي الأمير مولاي عبد الله", city: "Rabat", cityAr: "الرباط", capacity: "68 700", status: "Opérationnel", statusAr: "جاهز", image: "/stadiums/moulay-abdellah.png", detail: "Une enceinte entièrement reconstruite et opérationnelle depuis septembre 2025.", detailAr: "منشأة أعيد بناؤها بالكامل ودخلت الخدمة منذ شتنبر 2025.", tag: "Capitale", tagAr: "العاصمة" },
-  { name: "Grand Stade de Tanger", nameAr: "الملعب الكبير لطنجة", city: "Tanger", cityAr: "طنجة", capacity: "75 000", status: "Opérationnel", statusAr: "جاهز", image: "/stadiums/tanger-aerial.jpg", detail: "Une enceinte transformée, couverte et prête pour les grandes échéances internationales.", detailAr: "منشأة تم تحديثها وتغطيتها وأصبحت جاهزة للاستحقاقات الدولية الكبرى.", tag: "Nord du Maroc", tagAr: "شمال المغرب" },
-  { name: "Grand Stade de Marrakech", nameAr: "الملعب الكبير لمراكش", city: "Marrakech", cityAr: "مراكش", capacity: "46 000", status: "Phase 2 des travaux", statusAr: "المرحلة الثانية من الأشغال", image: "/stadiums/hassan-ii-landscape.jpg", detail: "Une transformation profonde : nouvelle configuration, tribunes couvertes et pelouse abaissée.", detailAr: "تحول عميق: تصميم جديد ومدرجات مغطاة وخفض مستوى أرضية الملعب.", tag: "Tourisme & sport", tagAr: "السياحة والرياضة" },
-  { name: "Stade Adrar", nameAr: "ملعب أدرار", city: "Agadir", cityAr: "أكادير", capacity: "46 000", status: "Phase 2 des travaux", statusAr: "المرحلة الثانية من الأشغال", image: "/stadiums/hassan-ii-front.jpg", detail: "La piste d’athlétisme disparaît pour rapprocher les nouvelles tribunes de la pelouse.", detailAr: "إزالة مضمار ألعاب القوى لتقريب المدرجات الجديدة من أرضية الملعب.", tag: "Façade atlantique", tagAr: "الواجهة الأطلسية" },
-  { name: "Stade de Fès", nameAr: "ملعب فاس", city: "Fès", cityAr: "فاس", capacity: "55 800", status: "Transformation programmée", statusAr: "تحول مبرمج", image: "/stadiums/hassan-ii-aerial.jpg", detail: "Une deuxième transformation estimée à 2,816 milliards de dirhams pour atteindre les standards FIFA.", detailAr: "مرحلة ثانية من التحول بتكلفة تقدر بـ 2.816 مليار درهم للوصول إلى معايير الفيفا.", tag: "Patrimoine & sport", tagAr: "التراث والرياضة" },
+  { name: "Grand Stade Hassan II", nameAr: "الملعب الكبير الحسن الثاني", city: "Benslimane", cityAr: "بن سليمان", capacity: "115 000", status: "En chantier", statusAr: "قيد الإنجاز", image: "/stadiums/hassan-ii-venue.jpg", detail: "Le chantier phare : une enceinte conçue pour devenir l’un des grands symboles de 2030.", detailAr: "المشروع الأبرز: منشأة مرشحة لتصبح أحد رموز مونديال 2030.", tag: "Projet majeur", tagAr: "مشروع كبير" },
+  { name: "Complexe sportif Prince Moulay Abdellah", nameAr: "المجمع الرياضي الأمير مولاي عبد الله", city: "Rabat", cityAr: "الرباط", capacity: "68 700", status: "Opérationnel", statusAr: "جاهز", image: "/stadiums/moulay-abdellah-venue.jpg", detail: "Une enceinte entièrement reconstruite et opérationnelle depuis septembre 2025.", detailAr: "منشأة أعيد بناؤها بالكامل ودخلت الخدمة منذ شتنبر 2025.", tag: "Capitale", tagAr: "العاصمة" },
+  { name: "Grand Stade de Tanger", nameAr: "الملعب الكبير لطنجة", city: "Tanger", cityAr: "طنجة", capacity: "75 000", status: "Opérationnel", statusAr: "جاهز", image: "/stadiums/tanger-venue.jpg", detail: "Une enceinte transformée, couverte et prête pour les grandes échéances internationales.", detailAr: "منشأة تم تحديثها وتغطيتها وأصبحت جاهزة للاستحقاقات الدولية الكبرى.", tag: "Nord du Maroc", tagAr: "شمال المغرب" },
+  { name: "Grand Stade de Marrakech", nameAr: "الملعب الكبير لمراكش", city: "Marrakech", cityAr: "مراكش", capacity: "46 000", status: "Phase 2 des travaux", statusAr: "المرحلة الثانية من الأشغال", image: "/stadiums/marrakech-venue.jpg", detail: "Une transformation profonde : nouvelle configuration, tribunes couvertes et pelouse abaissée.", detailAr: "تحول عميق: تصميم جديد ومدرجات مغطاة وخفض مستوى أرضية الملعب.", tag: "Tourisme & sport", tagAr: "السياحة والرياضة" },
+  { name: "Stade Adrar", nameAr: "ملعب أدرار", city: "Agadir", cityAr: "أكادير", capacity: "46 000", status: "Phase 2 des travaux", statusAr: "المرحلة الثانية من الأشغال", image: "/stadiums/agadir-venue.jpg", detail: "La piste d’athlétisme disparaît pour rapprocher les nouvelles tribunes de la pelouse.", detailAr: "إزالة مضمار ألعاب القوى لتقريب المدرجات الجديدة من أرضية الملعب.", tag: "Façade atlantique", tagAr: "الواجهة الأطلسية" },
+  { name: "Stade de Fès", nameAr: "ملعب فاس", city: "Fès", cityAr: "فاس", capacity: "55 800", status: "Transformation programmée", statusAr: "تحول مبرمج", image: "/stadiums/fes-venue.webp", detail: "Une deuxième transformation estimée à 2,816 milliards de dirhams pour atteindre les standards FIFA.", detailAr: "مرحلة ثانية من التحول بتكلفة تقدر بـ 2.816 مليار درهم للوصول إلى معايير الفيفا.", tag: "Patrimoine & sport", tagAr: "التراث والرياضة" },
 ] as const;
 
 export default function Home() {
@@ -656,7 +656,7 @@ export default function Home() {
                     <p className="mt-4 text-base leading-7 text-[#46515C]">{isArabic ? card.descriptionAr : card.description}</p>
                     <div className="mt-8 flex items-center justify-between border-t border-[#0147AD]/8 pt-4">
                       <span className="text-sm text-[#66727D]">{currentCopy.investDiscover}</span>
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0147AD] text-white transition group-hover:bg-[#0147AD] group-hover:text-[#0147AD]">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0147AD] text-white transition group-hover:bg-[#DCDCDC] group-hover:text-[#0147AD]">
                         <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
@@ -795,7 +795,7 @@ export default function Home() {
                   </div>
 
                   <div className="absolute inset-x-4 bottom-4 rounded-[22px] border border-white/12 bg-[#0147AD]/70 p-5 backdrop-blur-lg transition duration-300 group-hover:-translate-y-1">
-                    <div className="text-[0.6rem] uppercase tracking-[0.18em] text-[#0147AD]">{isArabic ? project.categoryAr : project.category}</div>
+                    <div className="text-[0.6rem] uppercase tracking-[0.18em] text-white/75">{isArabic ? project.categoryAr : project.category}</div>
                     <div className="mt-3 flex items-center justify-between gap-3">
                       <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white">{isArabic ? project.titleAr : project.title}</h3>
                       <span className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1.5 text-[0.58rem] uppercase tracking-[0.12em] text-white/80">
@@ -1172,32 +1172,32 @@ export default function Home() {
 
                 <div className="mt-8 space-y-4 md:mt-12">
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#DCDCDC]">
                       {isArabic ? "البريد الإلكتروني" : "Email"}
                     </div>
-                    <a href={`mailto:${contactInfo.email}`} className="mt-2 text-lg font-semibold text-white hover:text-[#0147AD] transition">
+                    <a href={`mailto:${contactInfo.email}`} className="mt-2 text-lg font-semibold text-white hover:text-[#DCDCDC] transition">
                       {contactInfo.email}
                     </a>
                   </div>
 
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#DCDCDC]">
                       {isArabic ? "الهاتف" : "Téléphone"}
                     </div>
-                    <a href={`tel:${contactInfo.phone}`} className="mt-2 text-lg font-semibold text-white hover:text-[#0147AD] transition">
+                    <a href={`tel:${contactInfo.phone}`} className="mt-2 text-lg font-semibold text-white hover:text-[#DCDCDC] transition">
                       {contactInfo.phone}
                     </a>
                   </div>
 
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#DCDCDC]">
                       {isArabic ? "العنوان" : "Adresse"}
                     </div>
                     <p className="mt-2 text-base text-slate-200">{isArabic ? (contactInfo.addressAr ?? contactInfo.address) : contactInfo.address}</p>
                   </div>
 
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD] mb-4">
+                    <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#DCDCDC] mb-4">
                       {isArabic ? "تابعنا على وسائل التواصل" : "Suivez nous"}
                     </div>
                     <div className="flex gap-3">
@@ -1267,7 +1267,7 @@ export default function Home() {
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-[#0147AD] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#0147AD] hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                    className="w-full rounded-full bg-[#DCDCDC] px-6 py-3.5 text-sm font-semibold text-[#0147AD] transition hover:bg-white hover:-translate-y-0.5 flex items-center justify-center gap-2"
                   >
                     {isArabic ? "إرسال الرسالة" : "Envoyer"}
                     <ArrowRight className="h-4 w-4" />
