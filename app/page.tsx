@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import {
   ArrowRight,
@@ -148,6 +149,7 @@ const copy = {
       { label: "Études & Données", href: "#donnees" },
       { label: "Projets", href: "#projets" },
       { label: "Stades 2030", href: "#stades-2030" },
+      { label: "GEN Z", href: "#genz" },
       { label: "Vision", href: "#vision" },
       { label: "Contact", href: "#contact" },
     ],
@@ -220,6 +222,7 @@ const copy = {
       { label: "الدراسات والبيانات", href: "#donnees" },
       { label: "المشاريع", href: "#projets" },
       { label: "ملاعب 2030", href: "#stades-2030" },
+      { label: "جيل زد", href: "#genz" },
       { label: "الرؤية", href: "#vision" },
       { label: "تواصل", href: "#contact" },
     ],
@@ -293,6 +296,7 @@ const navLabels = {
     { label: "Études & Données", href: "#donnees" },
     { label: "Projets", href: "#projets" },
     { label: "Stades 2030", href: "#stades-2030" },
+    { label: "GEN Z", href: "#genz" },
     { label: "Vision", href: "#vision" },
     { label: "Contact", href: "#contact" },
   ],
@@ -303,6 +307,7 @@ const navLabels = {
     { label: "الدراسات والبيانات", href: "#donnees" },
     { label: "المشاريع", href: "#projets" },
     { label: "ملاعب 2030", href: "#stades-2030" },
+    { label: "جيل زد", href: "#genz" },
     { label: "الرؤية", href: "#vision" },
     { label: "تواصل", href: "#contact" },
   ],
@@ -314,12 +319,12 @@ function useTextDirection(language: Language) {
 
 
 const moroccoStadiums = [
-  { name: "Grand Stade Hassan II", nameAr: "الملعب الكبير الحسن الثاني", city: "Casablanca", cityAr: "الدار البيضاء", detail: "Un projet métropolitain d’envergure pour le Grand Casablanca.", detailAr: "مشروع حضري كبير لمنطقة الدار البيضاء الكبرى.", tag: "Projet majeur", tagAr: "مشروع كبير" },
-  { name: "Complexe sportif Prince Moulay Abdellah", nameAr: "المجمع الرياضي الأمير مولاي عبد الله", city: "Rabat", cityAr: "الرباط", detail: "Une enceinte au cœur de la capitale administrative du Royaume.", detailAr: "منشأة رياضية في قلب العاصمة الإدارية للمملكة.", tag: "Capitale", tagAr: "العاصمة" },
-  { name: "Grand Stade de Tanger", nameAr: "الملعب الكبير لطنجة", city: "Tanger", cityAr: "طنجة", detail: "Une porte d’entrée internationale sur le détroit de Gibraltar.", detailAr: "بوابة دولية على مضيق جبل طارق.", tag: "Nord du Maroc", tagAr: "شمال المغرب" },
-  { name: "Grand Stade de Marrakech", nameAr: "الملعب الكبير لمراكش", city: "Marrakech", cityAr: "مراكش", detail: "Un site sportif connecté à l’attractivité touristique de la ville ocre.", detailAr: "منشأة رياضية مرتبطة بالجاذبية السياحية للمدينة الحمراء.", tag: "Tourisme & sport", tagAr: "السياحة والرياضة" },
-  { name: "Stade Adrar", nameAr: "ملعب أدرار", city: "Agadir", cityAr: "أكادير", detail: "Un équipement majeur pour la façade atlantique et le Souss.", detailAr: "منشأة رئيسية للواجهة الأطلسية ومنطقة سوس.", tag: "Façade atlantique", tagAr: "الواجهة الأطلسية" },
-  { name: "Stade de Fès", nameAr: "ملعب فاس", city: "Fès", cityAr: "فاس", detail: "Un ancrage sportif et culturel au cœur de la région Fès-Meknès.", detailAr: "حضور رياضي وثقافي في قلب جهة فاس مكناس.", tag: "Patrimoine & sport", tagAr: "التراث والرياضة" },
+  { name: "Grand Stade Hassan II", nameAr: "الملعب الكبير الحسن الثاني", city: "Benslimane", cityAr: "بن سليمان", capacity: "115 000", status: "En chantier", statusAr: "قيد الإنجاز", image: "/stadiums/hassan-ii.jpg", detail: "Le chantier phare : une enceinte conçue pour devenir l’un des grands symboles de 2030.", detailAr: "المشروع الأبرز: منشأة مرشحة لتصبح أحد رموز مونديال 2030.", tag: "Projet majeur", tagAr: "مشروع كبير" },
+  { name: "Complexe sportif Prince Moulay Abdellah", nameAr: "المجمع الرياضي الأمير مولاي عبد الله", city: "Rabat", cityAr: "الرباط", capacity: "68 700", status: "Opérationnel", statusAr: "جاهز", image: "/stadiums/moulay-abdellah.png", detail: "Une enceinte entièrement reconstruite et opérationnelle depuis septembre 2025.", detailAr: "منشأة أعيد بناؤها بالكامل ودخلت الخدمة منذ شتنبر 2025.", tag: "Capitale", tagAr: "العاصمة" },
+  { name: "Grand Stade de Tanger", nameAr: "الملعب الكبير لطنجة", city: "Tanger", cityAr: "طنجة", capacity: "75 000", status: "Opérationnel", statusAr: "جاهز", image: "/stadiums/tanger-aerial.jpg", detail: "Une enceinte transformée, couverte et prête pour les grandes échéances internationales.", detailAr: "منشأة تم تحديثها وتغطيتها وأصبحت جاهزة للاستحقاقات الدولية الكبرى.", tag: "Nord du Maroc", tagAr: "شمال المغرب" },
+  { name: "Grand Stade de Marrakech", nameAr: "الملعب الكبير لمراكش", city: "Marrakech", cityAr: "مراكش", capacity: "46 000", status: "Phase 2 des travaux", statusAr: "المرحلة الثانية من الأشغال", image: "/stadiums/hassan-ii-landscape.jpg", detail: "Une transformation profonde : nouvelle configuration, tribunes couvertes et pelouse abaissée.", detailAr: "تحول عميق: تصميم جديد ومدرجات مغطاة وخفض مستوى أرضية الملعب.", tag: "Tourisme & sport", tagAr: "السياحة والرياضة" },
+  { name: "Stade Adrar", nameAr: "ملعب أدرار", city: "Agadir", cityAr: "أكادير", capacity: "46 000", status: "Phase 2 des travaux", statusAr: "المرحلة الثانية من الأشغال", image: "/stadiums/hassan-ii-front.jpg", detail: "La piste d’athlétisme disparaît pour rapprocher les nouvelles tribunes de la pelouse.", detailAr: "إزالة مضمار ألعاب القوى لتقريب المدرجات الجديدة من أرضية الملعب.", tag: "Façade atlantique", tagAr: "الواجهة الأطلسية" },
+  { name: "Stade de Fès", nameAr: "ملعب فاس", city: "Fès", cityAr: "فاس", capacity: "55 800", status: "Transformation programmée", statusAr: "تحول مبرمج", image: "/stadiums/hassan-ii-aerial.jpg", detail: "Une deuxième transformation estimée à 2,816 milliards de dirhams pour atteindre les standards FIFA.", detailAr: "مرحلة ثانية من التحول بتكلفة تقدر بـ 2.816 مليار درهم للوصول إلى معايير الفيفا.", tag: "Patrimoine & sport", tagAr: "التراث والرياضة" },
 ] as const;
 
 export default function Home() {
@@ -807,11 +812,7 @@ export default function Home() {
                   className="group relative overflow-hidden rounded-[30px] shadow-[0_24px_60px_rgba(11,31,51,0.12)]"
                 >
                   <div className="relative h-[420px] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
+                    <Image src={project.image} alt={project.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" loading={index === 0 ? "eager" : "lazy"} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#01347E]/90 via-[#01347E]/25 to-transparent" />
                   </div>
 
@@ -848,19 +849,33 @@ export default function Home() {
             </motion.div>
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {moroccoStadiums.map((stadium, index) => (
-                <motion.article key={stadium.name} {...reveal} transition={{ ...reveal.transition, delay: index * 0.05 }} className="group relative overflow-hidden rounded-[28px] border border-[#0147AD]/12 bg-white p-6 shadow-[0_16px_40px_rgba(1,71,173,0.08)] transition duration-300 hover:-translate-y-1">
-                  <div className="absolute inset-x-0 top-0 h-1 bg-[#0147AD]" />
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#DCDCDC] text-[#0147AD]"><Trophy className="h-5 w-5" /></div>
-                    <span className="rounded-full bg-[#DCDCDC] px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-[#0147AD]">{isArabic ? stadium.tagAr : stadium.tag}</span>
+                <motion.article key={stadium.name} {...reveal} transition={{ ...reveal.transition, delay: index * 0.05 }} className="group overflow-hidden rounded-[28px] border border-[#0147AD]/12 bg-white shadow-[0_16px_40px_rgba(1,71,173,0.08)] transition duration-300 hover:-translate-y-1">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#01347E]">
+                    <Image src={stadium.image} alt={isArabic ? stadium.nameAr : stadium.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" loading={index < 2 ? "eager" : "lazy"} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#01347E]/90 via-[#01347E]/10 to-transparent" />
+                    <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 text-white">
+                      <div><div className="text-[0.62rem] uppercase tracking-[0.16em] text-white/75">{isArabic ? stadium.cityAr : stadium.city}</div><h3 className="mt-1 text-xl font-semibold tracking-[-0.04em]">{isArabic ? stadium.nameAr : stadium.name}</h3></div>
+                      <span className="shrink-0 rounded-full bg-white/15 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.1em] backdrop-blur-md">{isArabic ? stadium.statusAr : stadium.status}</span>
+                    </div>
                   </div>
-                  <h3 className="mt-7 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? stadium.nameAr : stadium.name}</h3>
-                  <div className="mt-3 flex items-center gap-2 text-sm font-medium text-[#46515C]"><MapPinned className="h-4 w-4 text-[#0147AD]" />{isArabic ? stadium.cityAr : stadium.city}</div>
-                  <p className="mt-5 text-base leading-7 text-[#46515C]">{isArabic ? stadium.detailAr : stadium.detail}</p>
+                  <div className="p-5 sm:p-6">
+                    <div className="flex items-center justify-between gap-3 text-sm"><span className="font-semibold text-[#0147AD]">{stadium.capacity} {isArabic ? "مقعد" : "places"}</span><span className="rounded-full bg-[#DCDCDC] px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-[#0147AD]">{isArabic ? stadium.tagAr : stadium.tag}</span></div>
+                    <p className="mt-4 text-sm leading-6 text-[#46515C]">{isArabic ? stadium.detailAr : stadium.detail}</p>
+                  </div>
                 </motion.article>
               ))}
             </div>
-            <p className="mt-8 text-xs leading-6 text-[#46515C]">{isArabic ? "قائمة تعريفية بالملاعب المرشحة ضمن تحضيرات المغرب لكأس العالم 2030؛ تُحدّث المعلومات وفق الإعلانات الرسمية." : "Sélection indicative des enceintes mobilisées dans les préparatifs du Maroc pour 2030 ; les informations seront actualisées selon les annonces officielles."}</p>
+            <p className="mt-8 text-xs leading-6 text-[#46515C]">{isArabic ? "قائمة تعريفية بالملاعب ضمن تحضيرات المغرب لكأس العالم 2030؛ الصور ومعطيات التقدم: Le360 Sport، 2 شتنبر 2026." : "Sélection indicative des enceintes mobilisées dans les préparatifs du Maroc pour 2030 ; images et état d’avancement : Le360 Sport, 2 septembre 2026."}</p>
+          </div>
+        </section>
+
+        <section id="genz" className="relative overflow-hidden bg-[#0147AD] py-20 text-white sm:py-24">
+          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, #DCDCDC 0 1px, transparent 1px), radial-gradient(circle at 80% 60%, #DCDCDC 0 1px, transparent 1px)", backgroundSize: "34px 34px" }} />
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...reveal} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+              <div><SectionLabel text={isArabic ? "جيل زد" : "GEN Z"} /><h2 className="mt-4 max-w-xl text-4xl font-semibold tracking-[-0.06em] text-white md:text-6xl">{isArabic ? "جيل جديد، ملعب جديد، مستقبل جديد." : "GEN Z ne regarde pas le futur. GEN Z le construit."}</h2></div>
+              <div><p className="max-w-2xl text-lg leading-8 text-white/85 sm:text-xl">{isArabic ? "شباب المغرب ليسوا جمهور الغد فقط؛ إنهم صناع التجربة الرقمية، الرياضية والاقتصادية التي سترافق مونديال 2030." : "La GEN Z marocaine n’est pas seulement le public de demain : elle imagine l’expérience digitale, sportive et entrepreneuriale qui accompagnera 2030."}</p><div className="mt-7 flex flex-wrap gap-3 text-sm font-semibold"><span className="rounded-full border border-white/25 bg-white/10 px-4 py-2">Digital first</span><span className="rounded-full border border-white/25 bg-white/10 px-4 py-2">Créativité</span><span className="rounded-full border border-white/25 bg-white/10 px-4 py-2">Impact local</span></div></div>
+            </motion.div>
           </div>
         </section>
 
@@ -957,11 +972,7 @@ export default function Home() {
             <motion.div {...reveal} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div className="overflow-hidden rounded-[30px] border border-[#0147AD]/8 bg-white shadow-[0_20px_50px_rgba(11,31,51,0.08)]">
                 <div className="relative h-[520px] overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
-                    alt="Portrait placeholder"
-                    className="h-full w-full object-cover"
-                  />
+                  <Image src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Portrait placeholder" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#01347E]/55 via-transparent to-transparent" />
 
                 </div>
@@ -1046,11 +1057,7 @@ export default function Home() {
                   className="group overflow-hidden rounded-[28px] border border-[#0147AD]/8 bg-white shadow-[0_18px_42px_rgba(11,31,51,0.04)] transition duration-300 hover:-translate-y-2"
                 >
                   <div className="relative h-[200px] overflow-hidden bg-gradient-to-br from-[#0147AD]/10 to-[#0147AD]/5">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
-                    />
+                    <Image src={article.image} alt={article.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw" className="object-cover transition duration-500 group-hover:scale-110" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0147AD]/40 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                   </div>
                   <div className="p-5">

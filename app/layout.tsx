@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.benslimane-province.ma"),
   title: "Benslimane | Investissement, développement territorial et Coupe du Monde 2030",
   description:
-    "Benslimane, investissement, développement territorial, Hamad El Dhehi, Coupe du Monde 2030, opportunités économiques et sportives au Maroc.",
+    "Benslimane, investissement, développement territorial, Hamad El Dhehi, Coupe du Monde 2030, opportunités économiques et sportives au Maroc, pour toutes les générations et la GEN Z.",
   keywords: [
     "Benslimane",
     "Hamad El Dhehi",
