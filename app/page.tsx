@@ -45,8 +45,6 @@ import {
   dashboardSeries,
   footerLinks,
   investmentCards,
-  navItems,
-  pageMeta,
   partnerships,
   processSteps,
   projectCards,
@@ -79,26 +77,6 @@ const iconMap: Record<string, LucideIcon> = {
 
 function SectionLabel({ text }: { text: string }) {
   return <span className="eyebrow">{text}</span>;
-}
-
-function SectionHeader({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow: string;
-  title: string;
-  description?: string;
-}) {
-  return (
-    <div className="mb-10 max-w-3xl">
-      <SectionLabel text={eyebrow} />
-      <h2 className="mt-5 text-4xl font-semibold tracking-[-0.05em] text-[#0147AD] md:text-5xl">
-        {title}
-      </h2>
-      {description ? <p className="mt-5 text-lg text-[#66727D]">{description}</p> : null}
-    </div>
-  );
 }
 
 function AnimatedCounter({ value, suffix = "", prefix = "" }: { value: number; suffix?: string; prefix?: string }) {
@@ -762,7 +740,7 @@ export default function Home() {
                           <Cell key={entry.name} fill={chartColors[index % chartColors.length]} />
                         ))}
                       </Pie>
-                      <Tooltip formatter={(value) => [`${value ?? 0}%`, "Part"]} />
+                      <Tooltip formatter={(value) => [`${value ?? 0}%`, isArabic ? "النسبة" : "Part"]} />
                     </PieChart>
                   </ResponsiveContainer>
                 </div>
@@ -772,7 +750,7 @@ export default function Home() {
                 <div className="mb-4 flex items-center gap-4">
                   <div>
                     <div className="text-[0.6rem] uppercase tracking-[0.18em] text-[#66727D]">{isArabic ? "الاتجاهات" : "Tendances"}</div>
-                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">Capacité d’investissement et d’emploi</h3>
+                    <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? "الاستثمار وفرص الشغل" : "Capacité d’investissement et d’emploi"}</h3>
                   </div>
                   <ShieldCheck className="h-6 w-6 text-[#0147AD]" />
                 </div>
@@ -986,9 +964,9 @@ export default function Home() {
                 <div className="mt-8 rounded-[26px] border border-[#0147AD]/8 bg-white p-6 shadow-[0_20px_50px_rgba(11,31,51,0.04)]">
                   <div className="text-[0.62rem] uppercase tracking-[0.2em] text-[#66727D]">{currentCopy.candidateLabel}</div>
                   <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-[#0147AD]">{publicFigure.name}</h3>
-                  <p className="mt-2 text-[#01347E]">{publicFigure.role}</p>
-                  <p className="mt-6 text-lg leading-8 text-[#46515C]">{publicFigure.intro}</p>
-                  <p className="mt-5 text-base leading-7 text-[#46515C]">{publicFigure.background}</p>
+                  <p className="mt-2 text-[#01347E]">{isArabic ? (publicFigure.roleAr ?? publicFigure.role) : publicFigure.role}</p>
+                  <p className="mt-6 text-lg leading-8 text-[#46515C]">{isArabic ? (publicFigure.introAr ?? publicFigure.intro) : publicFigure.intro}</p>
+                  <p className="mt-5 text-base leading-7 text-[#46515C]">{isArabic ? (publicFigure.backgroundAr ?? publicFigure.background) : publicFigure.background}</p>
 
                 </div>
               </div>
@@ -1021,11 +999,11 @@ export default function Home() {
                 >
                   <div className="p-6">
                     <div className="flex items-center justify-between gap-4 text-[0.6rem] uppercase tracking-[0.18em] text-[#66727D]">
-                      <span>{article.category}</span>
-                      <span>{article.date}</span>
+                      <span>{isArabic ? article.categoryAr : article.category}</span>
+                      <span>{isArabic ? article.dateAr : article.date}</span>
                     </div>
-                    <h3 className="mt-5 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{article.title}</h3>
-                    <p className="mt-4 text-base leading-7 text-[#46515C]">{article.description}</p>
+                    <h3 className="mt-5 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">{isArabic ? article.titleAr : article.title}</h3>
+                    <p className="mt-4 text-base leading-7 text-[#46515C]">{isArabic ? article.descriptionAr : article.description}</p>
                     <div className="mt-7 flex items-center justify-between border-t border-[#0147AD]/8 pt-4">
                       <span className="text-sm font-medium text-[#0147AD]">{isArabic ? "اقرأ المقال" : "Lire l'article"}</span>
                       <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#DCDCDC] text-[#0147AD] transition group-hover:bg-[#0147AD] group-hover:text-white">
@@ -1057,18 +1035,18 @@ export default function Home() {
                   className="group overflow-hidden rounded-[28px] border border-[#0147AD]/8 bg-white shadow-[0_18px_42px_rgba(11,31,51,0.04)] transition duration-300 hover:-translate-y-2"
                 >
                   <div className="relative h-[200px] overflow-hidden bg-gradient-to-br from-[#0147AD]/10 to-[#0147AD]/5">
-                    <Image src={article.image} alt={article.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw" className="object-cover transition duration-500 group-hover:scale-110" loading="lazy" />
+                    <Image src={article.image} alt={isArabic ? article.titleAr : article.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw" className="object-cover transition duration-500 group-hover:scale-110" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0147AD]/40 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center justify-between text-[0.58rem] uppercase tracking-[0.16em]">
-                      <span className="text-[#0147AD]">{article.category}</span>
-                      <span className="text-[#66727D]">{article.date}</span>
+                      <span className="text-[#0147AD]">{isArabic ? article.categoryAr : article.category}</span>
+                      <span className="text-[#66727D]">{isArabic ? article.dateAr : article.date}</span>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold tracking-[-0.04em] text-[#0147AD] line-clamp-2">
-                      {article.title}
+                      {isArabic ? article.titleAr : article.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-[#46515C] line-clamp-2">{article.excerpt}</p>
+                    <p className="mt-3 text-sm leading-6 text-[#46515C] line-clamp-2">{isArabic ? article.excerptAr : article.excerpt}</p>
                     <div className="mt-5 flex items-center justify-between border-t border-[#0147AD]/8 pt-4">
                       <span className="text-sm font-medium text-[#0147AD]">
                         {isArabic ? "اقرأ المقال" : "Lire"}
@@ -1106,12 +1084,12 @@ export default function Home() {
                   className="group rounded-[28px] border border-[#0147AD]/8 bg-white p-6 shadow-[0_16px_40px_rgba(11,31,51,0.05)] transition-all duration-300"
                 >
                   <div className="mb-4 text-5xl">{partner.logo}</div>
-                  <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">{partner.status}</div>
+                  <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">{isArabic ? partner.statusAr : partner.status}</div>
                   <h3 className="mt-3 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">
                     {partner.name}
                   </h3>
-                  <p className="mt-2 text-sm font-medium text-[#66727D]">{partner.sector}</p>
-                  <p className="mt-4 text-base leading-7 text-[#46515C]">{partner.description}</p>
+                  <p className="mt-2 text-sm font-medium text-[#66727D]">{isArabic ? partner.sectorAr : partner.sector}</p>
+                  <p className="mt-4 text-base leading-7 text-[#46515C]">{isArabic ? partner.descriptionAr : partner.description}</p>
                   <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#DCDCDC] px-3 py-1.5 text-sm font-medium text-[#0147AD]">
                     {isArabic ? "تعرف أكثر" : "En savoir plus"}
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -1145,22 +1123,22 @@ export default function Home() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">{position.department}</div>
+                      <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">{isArabic ? position.departmentAr : position.department}</div>
                       <h3 className="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#0147AD]">
-                        {position.title}
+                        {isArabic ? position.titleAr : position.title}
                       </h3>
                     </div>
                     <span className="rounded-full bg-[#0147AD]/10 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-[#0147AD]">
-                      {position.type}
+                      {isArabic ? position.typeAr : position.type}
                     </span>
                   </div>
 
                   <div className="mt-4 flex items-center gap-2 text-sm text-[#66727D]">
                     <MapPinned className="h-4 w-4" />
-                    {position.location}
+                    {isArabic ? position.locationAr : position.location}
                   </div>
 
-                  <p className="mt-4 text-base leading-7 text-[#46515C]">{position.description}</p>
+                  <p className="mt-4 text-base leading-7 text-[#46515C]">{isArabic ? position.descriptionAr : position.description}</p>
 
                   <div className="mt-6 flex items-center gap-3">
                     <a
@@ -1215,7 +1193,7 @@ export default function Home() {
                     <div className="text-[0.6rem] uppercase tracking-[0.16em] text-[#0147AD]">
                       {isArabic ? "العنوان" : "Adresse"}
                     </div>
-                    <p className="mt-2 text-base text-slate-200">{contactInfo.address}</p>
+                    <p className="mt-2 text-base text-slate-200">{isArabic ? (contactInfo.addressAr ?? contactInfo.address) : contactInfo.address}</p>
                   </div>
 
                   <div className="rounded-[20px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
@@ -1339,7 +1317,7 @@ export default function Home() {
               <ul className="mt-5 space-y-3 text-sm text-slate-300">
                 {footerLinks.investment.map((item) => (
                   <li key={item.label}>
-                    <a href={item.href} className="transition hover:text-white">{item.label}</a>
+                    <a href={item.href} className="transition hover:text-white">{isArabic ? item.labelAr : item.label}</a>
                   </li>
                 ))}
               </ul>

@@ -191,28 +191,28 @@ export const projectCards = [
 
 export const articleCards = [
   {
-    category: "Études",
-    date: "14 août 2026",
-    title: "Quels leviers pour accélérer l'attractivité économique de Benslimane ?",
-    description: "Une lecture territoriale des opportunités, des contraintes et des priorités d'action pour le développement local.",
+    category: "Études", categoryAr: "دراسات",
+    date: "14 août 2026", dateAr: "14 غشت 2026",
+    title: "Quels leviers pour accélérer l'attractivité économique de Benslimane ?", titleAr: "ما هي الروافع لتسريع الجاذبية الاقتصادية لبن سليمان؟",
+    description: "Une lecture territoriale des opportunités, des contraintes et des priorités d'action pour le développement local.", descriptionAr: "قراءة ترابية للفرص والتحديات وأولويات العمل من أجل التنمية المحلية.",
   },
   {
-    category: "Investissement",
-    date: "02 juillet 2026",
-    title: "Investir dans les territoires : enjeux, modèles et séquences de mise en œuvre",
-    description: "Une analyse des conditions qui favorisent la décision d'investissement sur des territoires à fort potentiel.",
+    category: "Investissement", categoryAr: "استثمار",
+    date: "02 juillet 2026", dateAr: "02 يوليوز 2026",
+    title: "Investir dans les territoires : enjeux, modèles et séquences de mise en œuvre", titleAr: "الاستثمار في المجالات الترابية: التحديات والنماذج ومراحل التنفيذ",
+    description: "Une analyse des conditions qui favorisent la décision d'investissement sur des territoires à fort potentiel.", descriptionAr: "تحليل للظروف التي تشجع على الاستثمار في المجالات ذات الإمكانات الكبيرة.",
   },
   {
-    category: "Développement territorial",
-    date: "18 juin 2026",
-    title: "Benslimane au carrefour des dynamiques économiques régionales",
-    description: "Un regard sur la position stratégique, les infrastructures et les axes de développement à prioriser.",
+    category: "Développement territorial", categoryAr: "تنمية ترابية",
+    date: "18 juin 2026", dateAr: "18 يونيو 2026",
+    title: "Benslimane au carrefour des dynamiques économiques régionales", titleAr: "بن سليمان عند ملتقى الديناميات الاقتصادية الجهوية",
+    description: "Un regard sur la position stratégique, les infrastructures et les axes de développement à prioriser.", descriptionAr: "نظرة على الموقع الاستراتيجي والبنية التحتية وأولويات التنمية.",
   },
   {
-    category: "Actualités économiques",
-    date: "09 mai 2026",
-    title: "Territoires, innovation et attractivité : les nouvelles logiques de croissance",
-    description: "Des éléments de contexte pour repenser les trajectoires de développement durable et inclusif.",
+    category: "Actualités économiques", categoryAr: "أخبار اقتصادية",
+    date: "09 mai 2026", dateAr: "09 ماي 2026",
+    title: "Territoires, innovation et attractivité : les nouvelles logiques de croissance", titleAr: "المجالات الترابية والابتكار والجاذبية: منطق النمو الجديد",
+    description: "Des éléments de contexte pour repenser les trajectoires de développement durable et inclusif.", descriptionAr: "معطيات سياقية لإعادة التفكير في مسارات التنمية المستدامة والشاملة.",
   },
 ] as const;
 
@@ -236,10 +236,13 @@ export const processSteps = [
 export const publicFigure = {
   name: "Hamad El Dhehi / حمد الدهي",
   role: "Acteur territorial et candidat aux institutions",
+  roleAr: "فاعل ترابي ومرشح للمؤسسات المنتخبة",
   intro:
     "Hamad El Dhehi incarne une vision de proximité, de développement territorial et de représentation du terrain au service de Benslimane et de ses habitants.",
+  introAr: "يجسد حمد الدهي رؤية قريبة من المواطنين، تقوم على التنمية الترابية وتمثيل السكان وخدمة بن سليمان وأهلها.",
   background:
-    "Son engagement s'inscrit dans un projet de développement structurant : mieux représenter les citoyens, encourager les opportunités d'investissement, impulser des projets d'infrastructure et faire de Benslimane un territoire plus attractif à l'horizon de la Coupe du Monde 2026 et au-delà.",
+    "Son engagement s'inscrit dans un projet de développement structurant : mieux représenter les citoyens, encourager les opportunités d'investissement, impulser des projets d'infrastructure et faire de Benslimane un territoire plus attractif à l'horizon de la Coupe du Monde 2030 et au-delà.",
+  backgroundAr: "يندرج هذا الالتزام ضمن مشروع تنموي مهيكل: تمثيل أفضل للمواطنين، وتشجيع فرص الاستثمار، وإطلاق مشاريع البنية التحتية لجعل بن سليمان أكثر جاذبية في أفق كأس العالم 2030 وما بعده.",
 
 };
 
@@ -252,10 +255,10 @@ export const footerLinks = {
     { label: "Contact", href: "#contact" },
   ],
   investment: [
-    { label: "Agriculture", href: "#investir" },
-    { label: "Industrie", href: "#investir" },
-    { label: "Logistique", href: "#investir" },
-    { label: "Tourisme", href: "#investir" },
+    { label: "Agriculture", labelAr: "الزراعة", href: "#investir" },
+    { label: "Industrie", labelAr: "الصناعة", href: "#investir" },
+    { label: "Logistique", labelAr: "اللوجستيات", href: "#investir" },
+    { label: "Tourisme", labelAr: "السياحة", href: "#investir" },
   ],
 };
 
@@ -267,69 +270,41 @@ export const pageMeta = {
 
 // Blog Articles
 export const blogArticles = [
-  {
-    id: 1,
-    title: "Grand Stade Hassan II : L'avancée des travaux et l'impact économique",
-    excerpt: "Découvrez les dernières actualités sur la construction du plus grand stade de football au monde.",
-    date: "15 septembre 2026",
-    category: "Infrastructure",
-    image: "https://images.unsplash.com/photo-1531415407113-9b95eaac05a4?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 2,
-    title: "Ville intelligente : Benslimane se transforme",
-    excerpt: "Comment Benslimane se positionne comme centre de développement urbain durable et innovant.",
-    date: "10 septembre 2026",
-    category: "Développement urbain",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 3,
-    title: "Opportunités immobilières : Partenariat avec Domify",
-    excerpt: "Explorez les nouvelles opportunités d'investissement immobilier adaptées à la demande internationale.",
-    date: "05 septembre 2026",
-    category: "Immobilier",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 4,
-    title: "Gare TGV : Connecter Benslimane au reste du Maroc",
-    excerpt: "La modernisation de la gare et l'arrivée du TGV positionneront Benslimane comme carrefour stratégique.",
-    date: "01 septembre 2026",
-    category: "Transport",
-    image: "https://images.unsplash.com/photo-1569163139394-de4798aa62b1?auto=format&fit=crop&w=600&q=80",
-  },
+  { id: 1, title: "Grand Stade Hassan II : L'avancée des travaux et l'impact économique", titleAr: "الملعب الكبير الحسن الثاني: تقدم الأشغال والأثر الاقتصادي", excerpt: "Découvrez les dernières actualités sur la construction du plus grand stade de football au monde.", excerptAr: "اكتشف آخر المستجدات حول بناء أكبر ملعب لكرة القدم في العالم.", date: "15 septembre 2026", dateAr: "15 شتنبر 2026", category: "Infrastructure", categoryAr: "البنية التحتية", image: "https://images.unsplash.com/photo-1531415407113-9b95eaac05a4?auto=format&fit=crop&w=600&q=80" },
+  { id: 2, title: "Ville intelligente : Benslimane se transforme", titleAr: "المدينة الذكية: بن سليمان تتحول", excerpt: "Comment Benslimane se positionne comme centre de développement urbain durable et innovant.", excerptAr: "كيف تتموقع بن سليمان كمركز للتنمية الحضرية المستدامة والمبتكرة.", date: "10 septembre 2026", dateAr: "10 شتنبر 2026", category: "Développement urbain", categoryAr: "التنمية الحضرية", image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=600&q=80" },
+  { id: 3, title: "Opportunités immobilières : Partenariat avec Domify", titleAr: "الفرص العقارية: شراكة مع Domify", excerpt: "Explorez les nouvelles opportunités d'investissement immobilier adaptées à la demande internationale.", excerptAr: "استكشف فرص الاستثمار العقاري الجديدة الملائمة للطلب الدولي.", date: "05 septembre 2026", dateAr: "05 شتنبر 2026", category: "Immobilier", categoryAr: "العقارات", image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80" },
+  { id: 4, title: "Gare TGV : Connecter Benslimane au reste du Maroc", titleAr: "محطة القطار فائق السرعة: ربط بن سليمان بباقي المغرب", excerpt: "La modernisation de la gare et l'arrivée du TGV positionneront Benslimane comme carrefour stratégique.", excerptAr: "ستجعل تحديث المحطة ووصول القطار فائق السرعة بن سليمان ملتقى استراتيجياً.", date: "01 septembre 2026", dateAr: "01 شتنبر 2026", category: "Transport", categoryAr: "النقل", image: "https://images.unsplash.com/photo-1569163139394-de4798aa62b1?auto=format&fit=crop&w=600&q=80" },
 ];
 
 // Partnerships
 export const partnerships = [
   {
     name: "Domify",
-    sector: "Immobilier & Développement urbain",
-    description: "Partenaire stratégique pour le développement du secteur immobilier et l'adaptation aux standards internationaux.",
+    sector: "Immobilier & Développement urbain", sectorAr: "العقارات والتنمية الحضرية",
+    description: "Partenaire stratégique pour le développement du secteur immobilier et l'adaptation aux standards internationaux.", descriptionAr: "شريك استراتيجي لتطوير القطاع العقاري وملاءمته مع المعايير الدولية.",
     logo: "🏢",
-    status: "Actif",
+    status: "Actif", statusAr: "نشط",
   },
   {
     name: "Fédération Internationale de Football",
-    sector: "Sport & Événements",
-    description: "Collaboration pour l'organisation et l'accueil de la Coupe du Monde 2030.",
+    sector: "Sport & Événements", sectorAr: "الرياضة والفعاليات",
+    description: "Collaboration pour l'organisation et l'accueil de la Coupe du Monde 2030.", descriptionAr: "تعاون لتنظيم واستقبال كأس العالم 2030.",
     logo: "⚽",
-    status: "En cours de négociation",
+    status: "En cours de négociation", statusAr: "قيد التفاوض",
   },
   {
     name: "Agence Mondiale du Tourisme",
-    sector: "Tourisme",
-    description: "Développement du tourisme durable et promotion de Benslimane comme destination.",
+    sector: "Tourisme", sectorAr: "السياحة",
+    description: "Développement du tourisme durable et promotion de Benslimane comme destination.", descriptionAr: "تطوير السياحة المستدامة والترويج لبن سليمان كوجهة.",
     logo: "🌍",
-    status: "Actif",
+    status: "Actif", statusAr: "نشط",
   },
   {
     name: "Réseau des Villes Intelligentes",
-    sector: "Innovation & Technologie",
-    description: "Partage de bonnes pratiques et accompagnement dans la transformation numérique.",
+    sector: "Innovation & Technologie", sectorAr: "الابتكار والتكنولوجيا",
+    description: "Partage de bonnes pratiques et accompagnement dans la transformation numérique.", descriptionAr: "تبادل الممارسات الجيدة ومواكبة التحول الرقمي.",
     logo: "💡",
-    status: "Actif",
+    status: "Actif", statusAr: "نشط",
   },
 ];
 
@@ -340,32 +315,36 @@ export const recruitmentPositions = [
     title: "Responsable Développement Immobilier",
     department: "Immobilier",
     location: "Benslimane",
-    type: "CDI",
-    description: "Pilotage des projets immobiliers et partenariats avec Domify.",
+    type: "CDI", typeAr: "دوام كامل",
+    departmentAr: "العقارات", titleAr: "مسؤول تطوير العقارات", locationAr: "بن سليمان",
+    description: "Pilotage des projets immobiliers et partenariats avec Domify.", descriptionAr: "إدارة المشاريع العقارية والشراكات مع Domify.",
   },
   {
     id: 2,
     title: "Chef de Projet Stade Hassan II",
     department: "Infrastructures",
     location: "Benslimane",
-    type: "CDI",
-    description: "Suivi et coordination des travaux du Grand Stade Hassan II.",
+    type: "CDI", typeAr: "دوام كامل",
+    departmentAr: "البنية التحتية", titleAr: "مدير مشروع ملعب الحسن الثاني", locationAr: "بن سليمان",
+    description: "Suivi et coordination des travaux du Grand Stade Hassan II.", descriptionAr: "تتبع وتنسيق أشغال الملعب الكبير الحسن الثاني.",
   },
   {
     id: 3,
     title: "Responsable Tourisme & Marketing",
     department: "Tourisme",
     location: "Benslimane",
-    type: "CDI",
-    description: "Promotion et développement de l'offre touristique locale.",
+    type: "CDI", typeAr: "دوام كامل",
+    departmentAr: "السياحة", titleAr: "مسؤول السياحة والتسويق", locationAr: "بن سليمان",
+    description: "Promotion et développement de l'offre touristique locale.", descriptionAr: "الترويج للعرض السياحي المحلي وتطويره.",
   },
   {
     id: 4,
     title: "Développeur Full Stack",
     department: "Technologie",
     location: "Benslimane",
-    type: "CDI",
-    description: "Développement de solutions pour la ville intelligente.",
+    type: "CDI", typeAr: "دوام كامل",
+    departmentAr: "التكنولوجيا", titleAr: "مطور Full Stack", locationAr: "بن سليمان",
+    description: "Développement de solutions pour la ville intelligente.", descriptionAr: "تطوير حلول للمدينة الذكية.",
   },
 ];
 
@@ -373,6 +352,7 @@ export const contactInfo = {
   phone: "+212 (0) 5XX XXX XXX",
   email: "contact@benslimane2030.ma",
   address: "Benslimane, Province de Benslimane, Maroc",
+  addressAr: "بن سليمان، إقليم بن سليمان، المغرب",
   socialMedia: [
     { platform: "Facebook", url: "#" },
     { platform: "Instagram", url: "#" },
