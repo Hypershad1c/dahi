@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.benslimane-province.ma"),
   title: "Benslimane | Investissement, développement territorial et Coupe du Monde 2030",
   description:
-    "Benslimane, investissement, développement territorial, Hamad El Dhehi, Coupe du Monde 2030, opportunités économiques et sportives au Maroc, pour toutes les générations et la GEN Z.",
+    "Benslimane, investissement, développement territorial, Ahmed Dehy, Coupe du Monde 2030, opportunités économiques et sportives au Maroc, pour toutes les générations et la GEN Z.",
   keywords: [
     "Benslimane",
-    "Hamad El Dhehi",
-    "حمد الدهي",
+    "Ahmed Dehy",
+    "أحمد الدهي",
     "développement territorial",
     "investissement Maroc",
     "attractivité économique",
@@ -42,12 +42,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Benslimane | Investissement, développement territorial et Coupe du Monde 2030",
     description:
-      "Benslimane, investissement, développement territorial, Hamad El Dhehi et la dynamique de la Coupe du Monde 2030.",
+      "Benslimane, investissement, développement territorial, Ahmed Dehy et la dynamique de la Coupe du Monde 2030.",
     url: "https://www.benslimane-province.ma",
     siteName: "Benslimane — Développement & Investissement",
     locale: "fr_MA",
     type: "website",
     images: [{
+      url: "/ahmed-dehy.jpeg",
+      width: 1000,
+      height: 854,
+      alt: "Ahmed Dehy",
+    }, {
       url: "/stadiums/hassan-ii.jpg",
       width: 1216,
       height: 684,
@@ -58,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Benslimane | Investissement, développement territorial et Coupe du Monde 2030",
     description:
-      "Benslimane, investissement, développement territorial, Hamad El Dhehi et la dynamique de la Coupe du Monde 2030.",
+      "Benslimane, investissement, développement territorial, Ahmed Dehy et la dynamique de la Coupe du Monde 2030.",
   },
   robots: {
     index: true,
@@ -82,12 +87,29 @@ const structuredData = {
       sameAs: [],
     },
     {
+      "@type": "Person",
+      "@id": "https://www.benslimane-province.ma/#ahmed-dehy",
+      name: "Ahmed Dehy",
+      alternateName: "أحمد الدهي",
+      image: "https://www.benslimane-province.ma/ahmed-dehy.jpeg",
+      jobTitle: "Acteur territorial et candidat aux institutions",
+      description: "Ahmed Dehy porte une vision de proximité, de développement territorial et de représentation du terrain au service de Benslimane.",
+      worksFor: { "@id": "https://www.benslimane-province.ma/#organization" },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Benslimane",
+        addressRegion: "Casablanca-Settat",
+        addressCountry: "MA",
+      },
+    },
+    {
       "@type": "WebSite",
       "@id": "https://www.benslimane-province.ma/#website",
       url: "https://www.benslimane-province.ma",
       name: "Benslimane — Développement & Investissement",
       inLanguage: ["fr-MA", "ar-MA"],
       publisher: { "@id": "https://www.benslimane-province.ma/#organization" },
+      about: { "@id": "https://www.benslimane-province.ma/#ahmed-dehy" },
     },
     {
       "@type": "SportsEvent",

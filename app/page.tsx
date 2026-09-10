@@ -182,9 +182,9 @@ const copy = {
     legal: "Mentions légales",
     privacy: "Politique de confidentialité",
     candidateLabel: "Candidat / Candidate",
-    candidateName: "Hamad El Dhehi / حمد الدهي",
+    candidateName: "Ahmed Dehy / أحمد الدهي",
     candidateRole: "Acteur territorial et candidat aux institutions",
-    candidateIntro: "Hamad El Dhehi incarne une vision de proximité, de développement territorial et de représentation du terrain au service de Benslimane et de ses habitants.",
+    candidateIntro: "Ahmed Dehy incarne une vision de proximité, de développement territorial et de représentation du terrain au service de Benslimane et de ses habitants.",
     candidateBackground: "Son engagement s'inscrit dans un projet de développement structurant : mieux représenter les citoyens, encourager les opportunités d'investissement, impulser des projets d'infrastructure et faire de Benslimane un territoire plus attractif à l'horizon de la Coupe du Monde 2030 et au-delà.",
     wcTitle: "Une dynamique territoriale qui va au-delà du sport.",
     wcIntro: "À l'horizon de la Coupe du Monde 2030, Benslimane se positionne comme un territoire stratégique pour le sport, l'accueil, l'infrastructure et la promotion de l'image du Maroc.",
@@ -254,9 +254,9 @@ const copy = {
     legal: "إشعارات قانونية",
     privacy: "سياسة الخصوصية",
     candidateLabel: "مرشح / مرشحة",
-    candidateName: "حمد الدهي / Hamad El Dhehi",
+    candidateName: "أحمد الدهي / Ahmed Dehy",
     candidateRole: "فاعل محلي ومرشح للهيئات المنتخبة",
-    candidateIntro: "يمثل حمد الدهي رؤية قريبة من المواطنين وتطويرية ترتكز على أرض الواقع لخدمة بن سليمان وسكانها.",
+    candidateIntro: "يمثل أحمد الدهي رؤية قريبة من المواطنين وتطويرية ترتكز على أرض الواقع لخدمة بن سليمان وسكانها.",
     candidateBackground: "يأتي هذا التزامه في إطار مشروع تنموي بنّاء: تمثيل أفضل للمواطنين، تشجيع الاستثمارات، وتطوير مشاريع البنية التحتية لجعل بن سليمان أكثر جاذبية في أفق كأس العالم 2030 وما بعدها.",
     wcTitle: "ديناميكية إقليمية تتجاوز الرياضة.",
     wcIntro: "في أفق كأس العالم 2030، تتبوأ بن سليمان موقعاً استراتيجياً في مجالات الرياضة، الاستقبال، البنية التحتية وتعزيز صورة المغرب.",
@@ -950,7 +950,7 @@ export default function Home() {
             <motion.div {...reveal} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div className="overflow-hidden rounded-[30px] border border-[#0147AD]/8 bg-white shadow-[0_20px_50px_rgba(11,31,51,0.08)]">
                 <div className="relative h-[520px] overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Portrait placeholder" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" loading="lazy" />
+                  <Image src="/ahmed-dehy.jpeg" alt="Ahmed Dehy" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#01347E]/55 via-transparent to-transparent" />
 
                 </div>

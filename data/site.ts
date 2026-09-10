@@ -234,12 +234,12 @@ export const processSteps = [
 ] as const;
 
 export const publicFigure = {
-  name: "Hamad El Dhehi / حمد الدهي",
+  name: "Ahmed Dehy / أحمد الدهي",
   role: "Acteur territorial et candidat aux institutions",
   roleAr: "فاعل ترابي ومرشح للمؤسسات المنتخبة",
   intro:
-    "Hamad El Dhehi incarne une vision de proximité, de développement territorial et de représentation du terrain au service de Benslimane et de ses habitants.",
-  introAr: "يجسد حمد الدهي رؤية قريبة من المواطنين، تقوم على التنمية الترابية وتمثيل السكان وخدمة بن سليمان وأهلها.",
+    "Ahmed Dehy incarne une vision de proximité, de développement territorial et de représentation du terrain au service de Benslimane et de ses habitants.",
+  introAr: "يجسد أحمد الدهي رؤية قريبة من المواطنين، تقوم على التنمية الترابية وتمثيل السكان وخدمة بن سليمان وأهلها.",
   background:
     "Son engagement s'inscrit dans un projet de développement structurant : mieux représenter les citoyens, encourager les opportunités d'investissement, impulser des projets d'infrastructure et faire de Benslimane un territoire plus attractif à l'horizon de la Coupe du Monde 2030 et au-delà.",
   backgroundAr: "يندرج هذا الالتزام ضمن مشروع تنموي مهيكل: تمثيل أفضل للمواطنين، وتشجيع فرص الاستثمار، وإطلاق مشاريع البنية التحتية لجعل بن سليمان أكثر جاذبية في أفق كأس العالم 2030 وما بعده.",
@@ -265,7 +265,7 @@ export const footerLinks = {
 export const pageMeta = {
   title: "Benslimane | Investissement, développement territorial et Coupe du Monde 2026",
   description:
-    "Découvrez Benslimane, ses opportunités d'investissement, la vision de Hamad El Dhehi et la dynamique territoriale à l'horizon de la Coupe du Monde 2026.",
+    "Découvrez Benslimane, ses opportunités d'investissement, la vision de Ahmed Dehy et la dynamique territoriale à l'horizon de la Coupe du Monde 2026.",
 };
 
 // Blog Articles
