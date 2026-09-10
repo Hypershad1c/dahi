@@ -140,7 +140,7 @@ const copy = {
       "Comprendre le potentiel de Benslimane, accompagner l’investissement et construire les territoires de demain.",
     heroPrimary: "Découvrir Benslimane",
     heroSecondary: "Explorer les opportunités",
-    heroPills: ["Territoire stratégique", "Investissement durable", "Réseaux économiques", "Attractivité locale"],
+    heroPills: ["Territoire stratégique pour investir", "Investissement durable", "Réseaux économiques", "Attractivité locale"],
     provinceLabel: "Pourquoi Benslimane",
     provinceTitle: "Comprendre le territoire pour mieux construire son avenir.",
     provinceText1: "Le bureau d’études accompagne les décideurs publics, les investisseurs et les acteurs du développement dans la compréhension fine du territoire.",
@@ -148,7 +148,7 @@ const copy = {
     statsTitle: "Benslimane en chiffres",
     statsNote: "Données vérifiées et à jour du territoire de Benslimane.",
     positionLabel: "Positionnement",
-    positionTitle: "Un territoire stratégique",
+    positionTitle: "Un territoire stratégique pour investir",
     positionText: "Benslimane s'inscrit à la croisée des grands axes économiques et urbains, entre les pôles majeurs du Maroc.",
     investLabel: "Opportunités",
     investTitle: "Investir à Benslimane",
@@ -213,7 +213,7 @@ const copy = {
     heroText: "فهم إمكانات بن سليمان ومرافقة الاستثمار وبناء مجتمعات المستقبل في هذا الإقليم.",
     heroPrimary: "اكتشف بن سليمان",
     heroSecondary: "استكشف الفرص",
-    heroPills: ["إقليم استراتيجي", "استثمار مستدام", "شبكات اقتصادية", "جاذبية محلية"],
+    heroPills: ["إقليم استراتيجي للاستثمار", "استثمار مستدام", "شبكات اقتصادية", "جاذبية محلية"],
     provinceLabel: "لماذا بن سليمان",
     provinceTitle: "فهم الإقليم لبناء مستقبل أفضل.",
     provinceText1: "يعمل المكتب الاستشاري مع صناع القرار، المستثمرين والفاعلين التنمويين لفهم هذا الإقليم بشكل دقيق.",
@@ -221,7 +221,7 @@ const copy = {
     statsTitle: "بن سليمان بالأرقام",
     statsNote: "بيانات موثوقة وحديثة عن إقليم بن سليمان.",
     positionLabel: "الموضع",
-    positionTitle: "إقليم استراتيجي",
+    positionTitle: "إقليم استراتيجي للاستثمار",
     positionText: "تقع بن سليمان عند تقاطع المحاور الاقتصادية الحضرية الكبرى بين المراكز الرئيسية في المغرب.",
     investLabel: "الفرص",
     investTitle: "الاستثمار في بن سليمان",
@@ -344,17 +344,7 @@ export default function Home() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <a href="#accueil" className="flex items-center gap-3 text-left">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#357B5F] text-sm font-black tracking-[-0.08em] text-white shadow-lg shadow-[#357B5F]/20">
-              B
-            </div>
-            <div>
-              <div className={`text-[0.7rem] font-black tracking-[0.22em] sm:text-[0.75rem] ${isScrolled ? "text-[#357B5F]" : "text-white/90"}`}>
-                {currentCopy.brandShort}
-              </div>
-              <div className={`text-[0.58rem] tracking-[0.18em] sm:text-[0.64rem] ${isScrolled ? "text-[#46515C]" : "text-white/70"}`}>
-                {currentCopy.brandLong}
-              </div>
-            </div>
+            <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={176} height={96} priority className="h-12 w-28 rounded-md object-contain sm:h-14 sm:w-32" />
           </a>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -1342,19 +1332,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
             <div>
-              <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#357B5F] text-lg font-black tracking-[-0.08em] text-white border border-white/10">
-                  B
-                </div>
-                <div>
-                  <div className="text-[0.7rem] font-black tracking-[0.22em] sm:text-[0.75rem]">
-                    {isArabic ? "بن سليمان" : "BENS LIMANE"}
-                  </div>
-                  <div className="text-[0.58rem] tracking-[0.18em] sm:text-[0.64rem]">
-                    {isArabic ? "التنمية والاستثمار" : "DÉVELOPPEMENT & INVESTISSEMENT"}
-                  </div>
-                </div>
-              </div>
+              <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={220} height={120} className="h-auto w-44 rounded-md object-contain" />
               <p className="mt-6 max-w-sm text-base leading-7 text-slate-300">
                 {isArabic ? "مكتب دراسات متخصص في التنمية الإقليمية والاستثمار وجاذبية الاقتصاد في إقليم بن سليمان." : "Bureau d’études spécialisé dans le développement territorial, l’investissement et l’attractivité économique de la Province de Benslimane."}
               </p>
