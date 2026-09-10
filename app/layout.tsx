@@ -126,7 +126,7 @@ const structuredData = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" dir="ltr" className={`${manrope.variable} ${inter.variable} h-full antialiased`}>
-      <body className="min-h-full bg-[#DCDCDC] text-[#1D2733]">
+      <body className="min-h-full bg-[#ECE8E5] text-[#1D2733]">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         {children}
       </body>

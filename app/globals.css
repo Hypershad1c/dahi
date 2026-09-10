@@ -4,16 +4,16 @@
   --background: #f6f2ea;
   --foreground: #171717;
   --color-navy: #0c1f2d;
-  --color-navy-strong: #01347E;
+  --color-navy-strong: #285C47;
   --color-gold: #d4a63a;
-  --color-gold-soft: #DCDCDC;
+  --color-gold-soft: #ECE8E5;
   --color-green: #1b7a5a;
-  --color-green-soft: #DCDCDC;
+  --color-green-soft: #ECE8E5;
   --color-ivory: #f6f2ea;
-  --color-surface: #DCDCDC;
+  --color-surface: #ECE8E5;
   --color-text: #17212b;
   --color-muted: #64707b;
-  --color-dark: #01347E;
+  --color-dark: #285C47;
   --font-display: "Manrope", sans-serif;
   --font-body: "Inter", sans-serif;
 }
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #DCDCDC 0%, #DCDCDC 100%);
+  background: linear-gradient(180deg, #ECE8E5 0%, #ECE8E5 100%);
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
