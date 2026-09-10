@@ -1329,20 +1329,19 @@ export default function Home() {
                 <li>contact@benslimane-province.ma</li>
                 <li>{isArabic ? "إقليم بن سليمان" : "Province de Benslimane"}</li>
                 <li>{isArabic ? "المملكة المغربية" : "Royaume du Maroc"}</li>
-                <li className="flex gap-3 pt-2">
-                  <a href="#" className="transition hover:text-white">LinkedIn</a>
-                  <a href="#" className="transition hover:text-white">X</a>
-                  <a href="#" className="transition hover:text-white">Instagram</a>
-                </li>
               </ul>
             </div>
           </div>
 
           <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-            <p>{isArabic ? "إقليم بن سليمان · المملكة المغربية" : "Province de Benslimane · Royaume du Maroc"}</p>
-            <div className="flex gap-6">
-              <a href="#" className="transition hover:text-white">{isArabic ? "إشعارات قانونية" : "Mentions légales"}</a>
-              <a href="#" className="transition hover:text-white">{isArabic ? "سياسة الخصوصية" : "Politique de confidentialité"}</a>
+            <div className="space-y-1">
+              <p>{isArabic ? "إقليم بن سليمان · المملكة المغربية" : "Province de Benslimane · Royaume du Maroc"}</p>
+              <p>© 2026 {isArabic ? "بن سليمان — التنمية والاستثمار" : "Benslimane — Développement & Investissement"} · {isArabic ? "آخر تحديث: 10 شتنبر 2026" : "Dernière mise à jour : 10 septembre 2026"}</p>
+            </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              <a href="/legal" className="transition hover:text-white">{isArabic ? "الإشعارات القانونية" : "Mentions légales"}</a>
+              <a href="/privacy" className="transition hover:text-white">{isArabic ? "سياسة الخصوصية" : "Politique de confidentialité"}</a>
+              <a href="/cookies" className="transition hover:text-white">{isArabic ? "سياسة ملفات الارتباط" : "Politique relative aux cookies"}</a>
             </div>
           </div>
         </div>
