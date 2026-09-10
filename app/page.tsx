@@ -128,6 +128,7 @@ const copy = {
       { label: "Projets", href: "#projets" },
       { label: "Stades 2030", href: "#stades-2030" },
       { label: "GEN Z", href: "#genz" },
+      { label: "FAQ & Carte", href: "#faq-carte" },
       { label: "Vision", href: "#vision" },
       { label: "Contact", href: "#contact" },
     ],
@@ -201,6 +202,7 @@ const copy = {
       { label: "المشاريع", href: "#projets" },
       { label: "ملاعب 2030", href: "#stades-2030" },
       { label: "جيل زد", href: "#genz" },
+      { label: "الأسئلة والخريطة", href: "#faq-carte" },
       { label: "الرؤية", href: "#vision" },
       { label: "تواصل", href: "#contact" },
     ],
@@ -1151,6 +1153,63 @@ export default function Home() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="faq-carte" className="section-shell bg-[#ECE8E5]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...reveal} className="mb-12 max-w-3xl">
+              <SectionLabel text={isArabic ? "الأسئلة والموقع" : "FAQ & localisation"} />
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#357B5F] md:text-5xl">
+                {isArabic ? "إجابات سريعة وموقع بن سليمان" : "Réponses rapides et localisation de Benslimane"}
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[#46515C]">
+                {isArabic ? "معلومات أساسية حول الإقليم وفرصه وموقعه الجغرافي." : "Les réponses essentielles sur le territoire, ses opportunités et sa localisation."}
+              </p>
+            </motion.div>
+
+            <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
+              <motion.div {...reveal} className="space-y-3">
+                {(isArabic ? [
+                  ["من هو أحمد الدهي؟", "أحمد الدهي فاعل ترابي ومرشح للمؤسسات المنتخبة، يدافع عن رؤية قريبة من المواطنين وعن تنمية بن سليمان."],
+                  ["لماذا الاستثمار في بن سليمان؟", "تتموقع بن سليمان بين الدار البيضاء والرباط، وتجمع بين الإمكانات الفلاحية والصناعية والسياحية واللوجستية."],
+                  ["ما هي القطاعات ذات الأولوية؟", "تشمل القطاعات ذات الأولوية الفلاحة والسياحة والصناعة واللوجستيات والعقارات والطاقة المتجددة والرياضة."],
+                  ["ما هي المشاريع المهيكلة قيد التحضير؟", "تشمل المشاريع المهيكلة البنية التحتية والتهيئة الترابية والمنشآت الرياضية والفرص المرتبطة بأفق 2030."],
+                  ["كيف يمكن التواصل مع الفريق؟", "يمكنكم التواصل عبر البريد الإلكتروني contact@benslimane2030.ma أو استخدام نموذج التواصل في أسفل الصفحة."],
+                ] : [
+                  ["Qui est Ahmed Dehy ?", "Ahmed Dehy est un acteur territorial et candidat aux institutions, porteur d’une vision de proximité pour le développement de Benslimane."],
+                  ["Pourquoi investir à Benslimane ?", "Benslimane se situe entre Casablanca et Rabat et réunit des potentiels agricoles, industriels, touristiques et logistiques."],
+                  ["Quels sont les secteurs prioritaires ?", "Les secteurs prioritaires comprennent l’agriculture, le tourisme, l’industrie, la logistique, l’immobilier, les énergies renouvelables et le sport."],
+                  ["Quels projets structurants sont en préparation ?", "Les projets structurants concernent les infrastructures, l’aménagement territorial, les équipements sportifs et les opportunités liées à l’horizon 2030."],
+                  ["Comment contacter l’équipe ?", "Vous pouvez écrire à contact@benslimane2030.ma ou utiliser le formulaire de contact situé en bas de la page."],
+                ]).map(([question, answer]) => (
+                  <details key={question} className="group rounded-2xl border border-[#357B5F]/12 bg-white px-5 py-4 shadow-[0_10px_24px_rgba(40,92,71,0.05)]">
+                    <summary className="cursor-pointer list-none pr-6 text-base font-semibold text-[#285C47] marker:hidden">{question}</summary>
+                    <p className="mt-3 text-sm leading-7 text-[#46515C]">{answer}</p>
+                  </details>
+                ))}
+              </motion.div>
+
+              <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="overflow-hidden rounded-[28px] border border-[#357B5F]/12 bg-white shadow-[0_16px_40px_rgba(40,92,71,0.08)]">
+                <div className="p-5 sm:p-6">
+                  <div className="flex items-center gap-3">
+                    <MapPinned className="h-5 w-5 text-[#357B5F]" />
+                    <h3 className="text-xl font-semibold text-[#285C47]">{isArabic ? "موقع بن سليمان" : "Benslimane sur la carte"}</h3>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-[#66727D]">{isArabic ? "المغرب · جهة الدار البيضاء سطات" : "Maroc · Région Casablanca-Settat"}</p>
+                </div>
+                <iframe
+                  title={isArabic ? "خريطة بن سليمان" : "Carte de Benslimane"}
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-7.28%2C33.50%2C-6.98%2C33.72&layer=mapnik&marker=33.6186%2C-7.13"
+                  className="h-[300px] w-full border-0 sm:h-[360px]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <div className="p-5 sm:p-6">
+                  <a href="https://www.openstreetmap.org/?mlat=33.6186&mlon=-7.13#map=12/33.6186/-7.13" target="_blank" rel="noreferrer" className="text-sm font-semibold text-[#357B5F] underline-offset-4 hover:underline">{isArabic ? "فتح الخريطة بشكل أكبر" : "Ouvrir la carte en grand"}</a>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
