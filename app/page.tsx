@@ -624,6 +624,17 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+
+            <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="mt-6 overflow-hidden rounded-[28px] border border-[#357B5F]/12 bg-white shadow-[0_16px_40px_rgba(40,92,71,0.08)]">
+              <div className="flex flex-col gap-2 p-5 sm:p-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold text-[#285C47]">{isArabic ? "موقع الإقليم وفرص الاستثمار" : "Localisation du territoire et des opportunités"}</h3>
+                  <p className="mt-1 text-sm text-[#66727D]">{isArabic ? "بن سليمان · جهة الدار البيضاء سطات" : "Benslimane · Région Casablanca-Settat"}</p>
+                </div>
+                <a href="https://www.openstreetmap.org/?mlat=33.6186&mlon=-7.13#map=12/33.6186/-7.13" target="_blank" rel="noreferrer" className="text-sm font-semibold text-[#357B5F] underline-offset-4 hover:underline">{isArabic ? "فتح الخريطة" : "Ouvrir la carte"}</a>
+              </div>
+              <iframe title={isArabic ? "خريطة بن سليمان وفرص الاستثمار" : "Carte du territoire stratégique de Benslimane"} src="https://www.openstreetmap.org/export/embed.html?bbox=-7.28%2C33.50%2C-6.98%2C33.72&layer=mapnik&marker=33.6186%2C-7.13" className="h-[300px] w-full border-0 sm:h-[380px]" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+            </motion.div>
           </div>
         </section>
 
@@ -1159,7 +1170,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
+            <div className="mx-auto max-w-4xl">
               <motion.div {...reveal} className="space-y-3">
                 {(isArabic ? [
                   ["من هو أحمد الدهي؟", "أحمد الدهي فاعل ترابي ومرشح للمؤسسات المنتخبة، يدافع عن رؤية قريبة من المواطنين وعن تنمية بن سليمان."],
@@ -1181,25 +1192,6 @@ export default function Home() {
                 ))}
               </motion.div>
 
-              <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="overflow-hidden rounded-[28px] border border-[#357B5F]/12 bg-white shadow-[0_16px_40px_rgba(40,92,71,0.08)]">
-                <div className="p-5 sm:p-6">
-                  <div className="flex items-center gap-3">
-                    <MapPinned className="h-5 w-5 text-[#357B5F]" />
-                    <h3 className="text-xl font-semibold text-[#285C47]">{isArabic ? "موقع بن سليمان" : "Benslimane sur la carte"}</h3>
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-[#66727D]">{isArabic ? "المغرب · جهة الدار البيضاء سطات" : "Maroc · Région Casablanca-Settat"}</p>
-                </div>
-                <iframe
-                  title={isArabic ? "خريطة بن سليمان" : "Carte de Benslimane"}
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=-7.28%2C33.50%2C-6.98%2C33.72&layer=mapnik&marker=33.6186%2C-7.13"
-                  className="h-[300px] w-full border-0 sm:h-[360px]"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-                <div className="p-5 sm:p-6">
-                  <a href="https://www.openstreetmap.org/?mlat=33.6186&mlon=-7.13#map=12/33.6186/-7.13" target="_blank" rel="noreferrer" className="text-sm font-semibold text-[#357B5F] underline-offset-4 hover:underline">{isArabic ? "فتح الخريطة بشكل أكبر" : "Ouvrir la carte en grand"}</a>
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>
