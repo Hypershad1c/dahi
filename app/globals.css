@@ -223,3 +223,17 @@ html.dark .bg-white\/75 { background-color: rgba(23, 54, 74, 0.9) !important; }
 html.dark .border-\[\#ECE8E5\] { border-color: rgba(216, 180, 90, 0.22) !important; }
 html.dark input::placeholder, html.dark textarea::placeholder { color: #AFC0C9; }
 html.dark iframe { filter: brightness(0.78) saturate(0.85); }
+
+
+/* The logo lockup is intentionally white in both themes for brand legibility. */
+html.dark .logo-lockup {
+  background-color: #FFFFFF !important;
+  color-scheme: light;
+}
+html.dark .logo-lockup img {
+  background-color: transparent !important;
+}
+html.dark nav {
+  background-color: rgba(23, 54, 74, 0.72);
+  border-color: rgba(216, 180, 90, 0.18);
+}
