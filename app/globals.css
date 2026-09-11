@@ -210,3 +210,16 @@ html.dark .bg-white { background-color: #17364A !important; }
 html.dark .moroccan-card { background: rgba(23, 54, 74, 0.88); border-color: rgba(216, 180, 90, 0.18); }
 html.dark header > div { background-color: rgba(16, 42, 67, 0.96); border-color: rgba(216, 180, 90, 0.2); }
 html.dark .text-white\/80 { color: rgba(243, 246, 244, 0.82); }
+html.dark .bg-\[\#E8E8E8\] { background-color: #17364A !important; }
+html.dark .border-\[\#357B5F\]\/8,
+html.dark .border-\[\#357B5F\]\/12,
+html.dark .border-\[\#357B5F\]\/15 { border-color: rgba(216, 180, 90, 0.22) !important; }
+html.dark .text-\[\#285C47\] { color: #D8B45A !important; }
+html.dark .bg-\[\#285C47\] { background-color: #17364A !important; }
+html.dark .bg-\[\#357B5F\] { background-color: #357B5F !important; }
+html.dark .hover\:bg-\[\#ECE8E5\]:hover { background-color: #D8B45A !important; color: #102A43 !important; }
+
+html.dark .bg-white\/75 { background-color: rgba(23, 54, 74, 0.9) !important; }
+html.dark .border-\[\#ECE8E5\] { border-color: rgba(216, 180, 90, 0.22) !important; }
+html.dark input::placeholder, html.dark textarea::placeholder { color: #AFC0C9; }
+html.dark iframe { filter: brightness(0.78) saturate(0.85); }

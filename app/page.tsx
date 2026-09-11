@@ -314,6 +314,13 @@ const heroMetricOptions = [
   { label: "Emploi local", labelAr: "التشغيل المحلي", value: "58%", change: "+9.6%", bars: [58, 69, 81] },
 ] as const;
 
+const investmentVisuals = [
+  { src: "/stadiums/hassan-ii-landscape.jpg", alt: "Grand Stade Hassan II and Benslimane development horizon" },
+  { src: "/stadiums/agadir-venue.jpg", alt: "Moroccan infrastructure and sustainable tourism venue" },
+  { src: "/stadiums/tanger-aerial.jpg", alt: "Moroccan transport and logistics infrastructure" },
+  { src: "/stadiums/marrakech-venue.jpg", alt: "Moroccan tourism and urban development venue" },
+] as const;
+
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -392,7 +399,7 @@ export default function Home() {
               ))}
             </div>
             <button type="button" aria-label={isDark ? "Activer le mode clair" : "Activer le mode sombre"} onClick={() => setIsDark((prev) => !prev)} className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#357B5F]/15 bg-white/75 text-[#357B5F] shadow-sm transition hover:bg-[#357B5F] hover:text-white">
-              <Moon className="h-4 w-4" />
+              {isDark ? <SunMedium className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[#357B5F] px-4 py-2.5 text-xs font-bold text-white shadow-[0_8px_18px_rgba(53,123,95,0.22)] transition hover:-translate-y-0.5 hover:bg-[#285C47] sm:px-5 sm:text-sm">
               {currentCopy.heroPrimary}
@@ -416,7 +423,7 @@ export default function Home() {
               ))}
             </div>
             <button type="button" aria-label={isDark ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن"} onClick={() => setIsDark((prev) => !prev)} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#357B5F]/15 bg-white text-[#357B5F] shadow-sm transition hover:bg-[#357B5F] hover:text-white">
-              <Moon className="h-4 w-4" />
+              {isDark ? <SunMedium className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
             <button
               aria-label={isArabic ? "فتح القائمة" : "Ouvrir le menu"}
@@ -579,6 +586,10 @@ export default function Home() {
               </div>
 
               <div className="space-y-6 text-lg leading-8 text-[#46515C]">
+                <div className="overflow-hidden rounded-[24px] border border-[#357B5F]/12 bg-white shadow-[0_16px_40px_rgba(40,92,71,0.08)]">
+                  <Image src="/stadiums/hassan-ii-landscape.jpg" alt={isArabic ? "مشهد لمشروع الملعب الكبير الحسن الثاني في بن سليمان" : "Vue du projet du Grand Stade Hassan II à Benslimane"} width={1200} height={675} className="h-52 w-full object-cover sm:h-64" loading="lazy" />
+                  <div className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#66727D]">{isArabic ? "بن سليمان · أفق 2030" : "Benslimane · Horizon 2030"}</div>
+                </div>
                 <p>{currentCopy.provinceText1}</p>
                 <p>{currentCopy.provinceText2}</p>
               </div>
@@ -671,8 +682,13 @@ export default function Home() {
               {investmentCards.map((card, index) => {
                 const Icon = iconMap[card.icon];
                 return (
-                  <motion.div key={card.title} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -6 }} className="group relative overflow-hidden rounded-[28px] border border-[#357B5F]/8 bg-white p-6 shadow-[0_16px_40px_rgba(10,19,28,0.05)] transition-all duration-300">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#357B5F] via-[#357B5F]/60 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                  <motion.div key={card.title} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -6 }} className="group relative overflow-hidden rounded-[28px] border border-[#357B5F]/8 bg-white shadow-[0_16px_40px_rgba(10,19,28,0.05)] transition-all duration-300">
+                    <div className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#357B5F] via-[#D8B45A] to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                    <div className="relative h-36 overflow-hidden">
+                      <Image src={investmentVisuals[index % investmentVisuals.length].src} alt={investmentVisuals[index % investmentVisuals.length].alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw" className="object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#285C47]/70 to-transparent" />
+                    </div>
+                    <div className="p-6">
                     <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ECE8E5] text-[#357B5F] transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                       <Icon className="h-5 w-5 text-[#357B5F]" />
                     </div>
@@ -684,6 +700,7 @@ export default function Home() {
                       <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#357B5F] text-white transition group-hover:bg-[#ECE8E5] group-hover:text-[#357B5F]">
                         <ArrowRight className="h-4 w-4" />
                       </span>
+                    </div>
                     </div>
                   </motion.div>
                 );
