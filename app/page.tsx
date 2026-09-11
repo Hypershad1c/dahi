@@ -14,6 +14,7 @@ import {
   Leaf,
   MapPinned,
   Menu,
+  Moon,
   MountainSnow,
   ShieldCheck,
   SunMedium,
@@ -307,10 +308,22 @@ const moroccoStadiums = [
   { name: "Stade de Fès", nameAr: "ملعب فاس", city: "Fès", cityAr: "فاس", capacity: "55 800", status: "Transformation programmée", statusAr: "تحول مبرمج", image: "/stadiums/fes-venue.webp", detail: "Une deuxième transformation estimée à 2,816 milliards de dirhams pour atteindre les standards FIFA.", detailAr: "مرحلة ثانية من التحول بتكلفة تقدر بـ 2.816 مليار درهم للوصول إلى معايير الفيفا.", tag: "Patrimoine & sport", tagAr: "التراث والرياضة" },
 ] as const;
 
+const heroMetricOptions = [
+  { label: "Attractivité", labelAr: "الجاذبية", value: "72%", change: "+18.4%", bars: [87, 63, 58] },
+  { label: "Investissement", labelAr: "الاستثمار", value: "63%", change: "+12.8%", bars: [63, 78, 54] },
+  { label: "Emploi local", labelAr: "التشغيل المحلي", value: "58%", change: "+9.6%", bars: [58, 69, 81] },
+] as const;
+
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [activeMetric, setActiveMetric] = useState(0);
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const savedTheme = window.localStorage.getItem("dahi-theme");
+    return savedTheme ? savedTheme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
   const [language, setLanguage] = useState<Language>("fr");
   const isArabic = language === "ar";
   const direction = useTextDirection(language);
@@ -332,6 +345,13 @@ export default function Home() {
     document.documentElement.lang = language;
     document.documentElement.dir = direction;
   }, [direction, language]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark);
+    window.localStorage.setItem("dahi-theme", isDark ? "dark" : "light");
+  }, [isDark]);
+
+  const selectedMetric = heroMetricOptions[activeMetric];
 
   return (
     <div dir={direction} className="min-h-screen bg-[#ECE8E5] text-[#1D2733]">
@@ -371,6 +391,9 @@ export default function Home() {
                 </button>
               ))}
             </div>
+            <button type="button" aria-label={isDark ? "Activer le mode clair" : "Activer le mode sombre"} onClick={() => setIsDark((prev) => !prev)} className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#357B5F]/15 bg-white/75 text-[#357B5F] shadow-sm transition hover:bg-[#357B5F] hover:text-white">
+              <Moon className="h-4 w-4" />
+            </button>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[#357B5F] px-4 py-2.5 text-xs font-bold text-white shadow-[0_8px_18px_rgba(53,123,95,0.22)] transition hover:-translate-y-0.5 hover:bg-[#285C47] sm:px-5 sm:text-sm">
               {currentCopy.heroPrimary}
               <ArrowRight className="h-4 w-4" />
@@ -392,6 +415,9 @@ export default function Home() {
                 </button>
               ))}
             </div>
+            <button type="button" aria-label={isDark ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن"} onClick={() => setIsDark((prev) => !prev)} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#357B5F]/15 bg-white text-[#357B5F] shadow-sm transition hover:bg-[#357B5F] hover:text-white">
+              <Moon className="h-4 w-4" />
+            </button>
             <button
               aria-label={isArabic ? "فتح القائمة" : "Ouvrir le menu"}
               aria-expanded={isMenuOpen}
@@ -495,31 +521,36 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
                 className="hidden lg:block"
               >
-                <div className="premium-card rounded-[32px] p-6 text-white">
+                <div className="premium-card rounded-[32px] p-5 text-white sm:p-6">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="section-kicker">Attractivité 2030</span>
-                    <span className="rounded-full border border-[#357B5F]/30 bg-[#357B5F]/10 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-[#ECE8E5]">
-                      +18.4%
-                    </span>
+                    <span className="section-kicker">{isArabic ? "مؤشرات الاستثمار" : "Indicateurs d’investissement"}</span>
+                    <span className="rounded-full border border-[#D8B45A]/35 bg-[#D8B45A]/15 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-[#ECE8E5]">2030</span>
                   </div>
 
-                  <div className="mt-8">
-                    <div className="text-[0.62rem] uppercase tracking-[0.18em] text-slate-300">Potentiel de développement</div>
-                    <div className="mt-4 flex items-end gap-3">
-                      <span className="text-5xl font-semibold tracking-[-0.06em] text-white">72%</span>
-                      <span className="pb-2 text-sm text-[#ECE8E5]">d&apos;attractivité</span>
+                  <div className="mt-6 grid grid-cols-3 gap-2">
+                    {heroMetricOptions.map((metric, index) => (
+                      <button key={metric.label} type="button" onClick={() => setActiveMetric(index)} className={`rounded-xl px-2 py-2 text-[0.62rem] font-semibold transition ${activeMetric === index ? "bg-[#D8B45A] text-[#102A43]" : "bg-white/8 text-white/70 hover:bg-white/15 hover:text-white"}`}>
+                        {isArabic ? metric.labelAr : metric.label}
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="mt-7 flex items-end justify-between gap-4">
+                    <div>
+                      <div className="text-[0.62rem] uppercase tracking-[0.18em] text-slate-300">{isArabic ? "المؤشر الحالي" : "Indice actuel"}</div>
+                      <div className="mt-2 flex items-end gap-3">
+                        <span className="text-5xl font-semibold tracking-[-0.06em] text-white">{selectedMetric.value}</span>
+                        <span className="pb-2 text-sm font-semibold text-[#D8B45A]">{selectedMetric.change}</span>
+                      </div>
                     </div>
+                    <BarChart3 className="h-9 w-9 text-[#D8B45A]" />
                   </div>
 
-                  <div className="mt-8 space-y-4">
-                    {[
-                      { label: "Vocation agricole", value: "87%" },
-                      { label: "Industrie & logistique", value: "63%" },
-                      { label: "Tourisme durable", value: "58%" },
-                    ].map((item) => (
-                      <div key={item.label} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
-                        <span className="text-sm text-slate-200">{item.label}</span>
-                        <span className="text-base font-semibold text-[#ECE8E5]">{item.value}</span>
+                  <div className="mt-7 space-y-3">
+                    {[isArabic ? "الفلاحة" : "Vocation agricole", isArabic ? "الصناعة واللوجستيك" : "Industrie & logistique", isArabic ? "السياحة المستدامة" : "Tourisme durable"].map((label, index) => (
+                      <div key={label}>
+                        <div className="mb-1 flex items-center justify-between text-xs text-slate-200"><span>{label}</span><span>{selectedMetric.bars[index]}%</span></div>
+                        <div className="h-1.5 overflow-hidden rounded-full bg-white/10"><motion.div initial={{ width: 0 }} animate={{ width: `${selectedMetric.bars[index]}%` }} transition={{ duration: 0.7 }} className="h-full rounded-full bg-[#D8B45A]" /></div>
                       </div>
                     ))}
                   </div>
