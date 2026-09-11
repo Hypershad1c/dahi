@@ -578,6 +578,35 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section-shell bg-[#ECE8E5]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...reveal} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div className="overflow-hidden rounded-[30px] border border-[#357B5F]/8 bg-white shadow-[0_20px_50px_rgba(11,31,51,0.08)]">
+                <div className="relative h-[520px] overflow-hidden">
+                  <Image src="/ahmed-dehy.jpeg" alt="Ahmed Dehy" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#285C47]/55 via-transparent to-transparent" />
+
+                </div>
+              </div>
+
+              <div>
+                <SectionLabel text={isArabic ? "رؤية عامة" : "Vision publique"} />
+                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#357B5F] md:text-5xl">
+                  {isArabic ? "رؤية من أجل الإقليم" : "Une vision pour le territoire"}
+                </h2>
+                <div className="mt-8 rounded-[26px] border border-[#357B5F]/8 bg-white p-6 shadow-[0_20px_50px_rgba(11,31,51,0.04)]">
+                  <div className="text-[0.62rem] uppercase tracking-[0.2em] text-[#66727D]">{currentCopy.candidateLabel}</div>
+                  <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-[#357B5F]">{publicFigure.name}</h3>
+                  <p className="mt-2 text-[#285C47]">{isArabic ? (publicFigure.roleAr ?? publicFigure.role) : publicFigure.role}</p>
+                  <p className="mt-6 text-lg leading-8 text-[#46515C]">{isArabic ? (publicFigure.introAr ?? publicFigure.intro) : publicFigure.intro}</p>
+                  <p className="mt-5 text-base leading-7 text-[#46515C]">{isArabic ? (publicFigure.backgroundAr ?? publicFigure.background) : publicFigure.background}</p>
+
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         <section id="vision" className="relative overflow-hidden bg-[#285C47] py-24 text-white">
           <div className="grid-surface absolute inset-0 opacity-60" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,162,39,0.16),_transparent_40%)]" />
@@ -991,34 +1020,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell bg-[#ECE8E5]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div {...reveal} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-              <div className="overflow-hidden rounded-[30px] border border-[#357B5F]/8 bg-white shadow-[0_20px_50px_rgba(11,31,51,0.08)]">
-                <div className="relative h-[520px] overflow-hidden">
-                  <Image src="/ahmed-dehy.jpeg" alt="Ahmed Dehy" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#285C47]/55 via-transparent to-transparent" />
 
-                </div>
-              </div>
-
-              <div>
-                <SectionLabel text={isArabic ? "رؤية عامة" : "Vision publique"} />
-                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#357B5F] md:text-5xl">
-                  {isArabic ? "رؤية من أجل الإقليم" : "Une vision pour le territoire"}
-                </h2>
-                <div className="mt-8 rounded-[26px] border border-[#357B5F]/8 bg-white p-6 shadow-[0_20px_50px_rgba(11,31,51,0.04)]">
-                  <div className="text-[0.62rem] uppercase tracking-[0.2em] text-[#66727D]">{currentCopy.candidateLabel}</div>
-                  <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-[#357B5F]">{publicFigure.name}</h3>
-                  <p className="mt-2 text-[#285C47]">{isArabic ? (publicFigure.roleAr ?? publicFigure.role) : publicFigure.role}</p>
-                  <p className="mt-6 text-lg leading-8 text-[#46515C]">{isArabic ? (publicFigure.introAr ?? publicFigure.intro) : publicFigure.intro}</p>
-                  <p className="mt-5 text-base leading-7 text-[#46515C]">{isArabic ? (publicFigure.backgroundAr ?? publicFigure.background) : publicFigure.background}</p>
-
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         <section className="section-shell bg-[#ECE8E5]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
