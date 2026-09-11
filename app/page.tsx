@@ -336,15 +336,11 @@ export default function Home() {
   return (
     <div dir={direction} className="min-h-screen bg-[#ECE8E5] text-[#1D2733]">
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? "border-b border-[#e2e8f0] bg-[#ECE8E5]/90 shadow-[0_10px_30px_rgba(10,19,28,0.08)] backdrop-blur-xl"
-            : "border-b border-transparent bg-transparent"
-        }`}
+        className="fixed inset-x-0 top-0 z-50 border-b border-[#357B5F]/10 bg-[#ECE8E5]/95 shadow-[0_10px_30px_rgba(40,92,71,0.08)] backdrop-blur-xl transition-all duration-500"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <a href="#accueil" className="flex items-center gap-3 text-left">
-            <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={176} height={96} priority className="h-12 w-28 rounded-md object-contain sm:h-14 sm:w-32" />
+            <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={176} height={96} priority className="h-11 w-28 rounded-lg bg-white object-contain shadow-sm sm:h-12 sm:w-32" />
           </a>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -352,15 +348,7 @@ export default function Home() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`text-sm transition-all duration-300 ${
-                  item.href === "#accueil"
-                    ? isScrolled
-                      ? "text-[#357B5F]"
-                      : "text-[#357B5F]"
-                    : isScrolled
-                      ? "text-[#46515C] hover:text-[#357B5F]"
-                      : "text-white/80 hover:text-white"
-                }`}
+                className="text-sm text-[#46515C] transition-colors duration-300 hover:text-[#357B5F]"
               >
                 {item.label}
               </a>
@@ -368,7 +356,7 @@ export default function Home() {
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 p-1 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#357B5F]/15 bg-white/70 p-1">
               {(["fr", "ar"] as const).map((option) => (
                 <button
                   key={option}
@@ -377,30 +365,28 @@ export default function Home() {
                   className={`rounded-full px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.14em] transition ${
                     language === option
                       ? "bg-[#357B5F] text-white shadow-sm"
-                      : isScrolled
-                        ? "text-[#357B5F]/70 hover:text-[#357B5F]"
-                        : "text-white/70 hover:text-white"
+                      : "text-[#357B5F]/70 hover:text-[#357B5F}"
                   }`}
                 >
                   {option === "fr" ? "FR" : "AR"}
                 </button>
               ))}
             </div>
-            <button className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition ${isScrolled ? "border-[#357B5F]/20 bg-[#357B5F] text-white hover:bg-[#285C47]" : "border-white/20 bg-white/6 text-white hover:border-[#357B5F]/50 hover:bg-white/10"}`}>
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[#357B5F]/20 bg-[#357B5F] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#285C47]">
               {currentCopy.heroPrimary}
               <ArrowRight className="h-4 w-4" />
-            </button>
+            </a>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <div className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 p-1 backdrop-blur-md">
+            <div className="inline-flex items-center gap-1 rounded-full border border-[#357B5F]/15 bg-white/70 p-1">
               {(["fr", "ar"] as const).map((option) => (
                 <button
                   key={option}
                   type="button"
                   onClick={() => setLanguage(option)}
                   className={`rounded-full px-2 py-1 text-[0.58rem] font-semibold uppercase ${
-                    language === option ? "bg-[#357B5F] text-white" : isScrolled ? "text-[#357B5F]/70" : "text-white/70"
+                    language === option ? "bg-[#357B5F] text-white" : "text-[#357B5F]/70"
                   }`}
                 >
                   {option === "fr" ? "FR" : "AR"}
