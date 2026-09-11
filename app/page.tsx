@@ -339,7 +339,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1440px] overflow-visible rounded-2xl border border-[#357B5F]/12 bg-[#ECE8E5]/95 shadow-[0_18px_50px_rgba(40,92,71,0.12)] backdrop-blur-xl transition-all duration-500">
           <div className="flex items-center justify-between px-3 py-3 sm:px-5 lg:px-6">
           <a href="#accueil" className="flex items-center gap-3 text-left">
-            <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={176} height={96} priority className="h-11 w-28 rounded-xl bg-white object-contain shadow-sm ring-1 ring-[#357B5F]/10 sm:h-12 sm:w-32" />
+            <Image src="/province-benslimane-logo.png" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={176} height={96} priority className="h-11 w-28 rounded-xl bg-white object-contain shadow-sm ring-1 ring-[#357B5F]/10 sm:h-12 sm:w-32" />
           </a>
 
           <nav className="hidden items-center gap-3 lg:flex xl:gap-5">
@@ -394,6 +394,8 @@ export default function Home() {
             </div>
             <button
               aria-label={isArabic ? "فتح القائمة" : "Ouvrir le menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setIsMenuOpen((prev) => !prev)}
               className={`inline-flex h-11 w-11 items-center justify-center rounded-full border transition ${isScrolled ? "border-[#357B5F]/10 bg-white text-[#357B5F]" : "border-white/20 bg-white/5 text-white hover:bg-white/10"}`}
             >
@@ -409,7 +411,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.25 }}
-              className="border-t border-white/10 bg-[#357B5F]/90 px-4 py-4 backdrop-blur-xl lg:hidden"
+              id="mobile-navigation"
+              role="dialog"
+              aria-label={isArabic ? "التنقل الرئيسي" : "Navigation principale"}
+              className="mx-2 mt-2 rounded-2xl border border-[#357B5F]/20 bg-[#285C47]/98 px-3 py-3 shadow-[0_18px_45px_rgba(40,92,71,0.22)] backdrop-blur-xl lg:hidden"
             >
               <div className="mx-auto flex max-w-7xl flex-col gap-3">
                 {navigation.map((item) => (
@@ -417,15 +422,15 @@ export default function Home() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-2xl border border-white/10 px-4 py-3 text-sm text-white/80 transition hover:border-[#357B5F]/60 hover:text-white"
+                    className="rounded-xl border border-white/10 px-4 py-3 text-sm font-semibold text-white/85 transition hover:border-[#D8B45A]/60 hover:bg-white/10 hover:text-white"
                   >
                     {item.label}
                   </a>
                 ))}
-                <button className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#357B5F] px-4 py-3 text-sm font-medium text-white">
+                <a href="#contact" onClick={() => setIsMenuOpen(false)} className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#D8B45A] px-4 py-3 text-sm font-bold text-[#102A43] transition hover:bg-[#ECE8E5]">
                   {currentCopy.heroPrimary}
                   <ArrowRight className="h-4 w-4" />
-                </button>
+                </a>
               </div>
             </motion.div>
           ) : null}
@@ -445,7 +450,7 @@ export default function Home() {
           <div className="bg-hero-overlay absolute inset-0" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,162,39,0.18),_transparent_40%)]" />
 
-          <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-36 sm:px-6 lg:px-8 lg:pb-28 lg:pt-40">
+          <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-32 sm:px-6 sm:pb-24 sm:pt-36 lg:px-8 lg:pb-32 lg:pt-44">
             <div className="grid items-end gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -453,21 +458,21 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
                 className="max-w-3xl"
               >
-                <div className="inline-flex items-center gap-3 rounded-full border border-white/18 bg-white/6 px-4 py-2 text-[0.68rem] font-medium tracking-[0.22em] text-white/80 backdrop-blur-md">
+                <div className="inline-flex items-center gap-3 rounded-full border border-[#D8B45A]/35 bg-[#102A43]/40 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#ECE8E5] shadow-lg backdrop-blur-md sm:text-[0.68rem]">
                   {currentCopy.heroBadge}
                 </div>
 
-                <h1 className="mt-8 text-5xl font-semibold leading-[0.92] tracking-[-0.07em] text-white sm:text-6xl lg:text-[6rem]">
+                <h1 className="mt-7 max-w-4xl text-[3.15rem] font-semibold leading-[0.9] tracking-[-0.075em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.18)] sm:mt-8 sm:text-6xl lg:text-[5.75rem]">
                   {currentCopy.heroTitle.map((line, index) => (
                     <span key={line + index} className="block">{line}</span>
                   ))}
                 </h1>
 
-                <p className="mt-8 max-w-xl text-lg leading-8 text-slate-200/90 md:text-xl">
+                <p className="mt-7 max-w-2xl text-base leading-7 text-[#ECE8E5]/90 sm:mt-8 sm:text-lg sm:leading-8 md:text-xl">
                   {currentCopy.heroText}
                 </p>
 
-                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
                   <a
                     href="#province"
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-[#357B5F] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_15px_30px_rgba(201,162,39,0.35)] transition hover:-translate-y-0.5"
@@ -1310,7 +1315,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
             <div>
-              <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={220} height={120} className="h-auto w-44 rounded-md object-contain" />
+              <Image src="/province-benslimane-logo.png" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={220} height={120} className="h-auto w-44 rounded-md object-contain" />
               <p className="mt-6 max-w-sm text-base leading-7 text-slate-300">
                 {isArabic ? "مكتب دراسات متخصص في التنمية الإقليمية والاستثمار وجاذبية الاقتصاد في إقليم بن سليمان." : "Bureau d’études spécialisé dans le développement territorial, l’investissement et l’attractivité économique de la Province de Benslimane."}
               </p>

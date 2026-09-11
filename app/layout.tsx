@@ -81,7 +81,7 @@ const structuredData = {
       name: "Benslimane — Développement & Investissement",
       alternateName: "بن سليمان — التنمية والاستثمار",
       url: "https://www.benslimane-province.ma",
-      logo: "https://www.benslimane-province.ma/dehy-logo.jpg",
+      logo: "https://www.benslimane-province.ma/province-benslimane-logo.png",
       email: "contact@benslimane2030.ma",
       areaServed: { "@type": "AdministrativeArea", name: "Province de Benslimane" },
       sameAs: [],
