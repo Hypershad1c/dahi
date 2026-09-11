@@ -194,25 +194,25 @@ export const articleCards = [
     category: "Études", categoryAr: "دراسات",
     date: "14 août 2026", dateAr: "14 غشت 2026",
     title: "Quels leviers pour accélérer l'attractivité économique de Benslimane ?", titleAr: "ما هي الروافع لتسريع الجاذبية الاقتصادية لبن سليمان؟",
-    description: "Une lecture territoriale des opportunités, des contraintes et des priorités d'action pour le développement local.", descriptionAr: "قراءة ترابية للفرص والتحديات وأولويات العمل من أجل التنمية المحلية.",
+    description: "Une lecture territoriale des opportunités, des contraintes et des priorités d'action pour le développement local.", descriptionAr: "قراءة ترابية للفرص والتحديات وأولويات العمل من أجل التنمية المحلية.", image: "/stadiums/hassan-ii-landscape.jpg",
   },
   {
     category: "Investissement", categoryAr: "استثمار",
     date: "02 juillet 2026", dateAr: "02 يوليوز 2026",
     title: "Investir dans les territoires : enjeux, modèles et séquences de mise en œuvre", titleAr: "الاستثمار في المجالات الترابية: التحديات والنماذج ومراحل التنفيذ",
-    description: "Une analyse des conditions qui favorisent la décision d'investissement sur des territoires à fort potentiel.", descriptionAr: "تحليل للظروف التي تشجع على الاستثمار في المجالات ذات الإمكانات الكبيرة.",
+    description: "Une analyse des conditions qui favorisent la décision d'investissement sur des territoires à fort potentiel.", descriptionAr: "تحليل للظروف التي تشجع على الاستثمار في المجالات ذات الإمكانات الكبيرة.", image: "/stadiums/tanger-aerial.jpg",
   },
   {
     category: "Développement territorial", categoryAr: "تنمية ترابية",
     date: "18 juin 2026", dateAr: "18 يونيو 2026",
     title: "Benslimane au carrefour des dynamiques économiques régionales", titleAr: "بن سليمان عند ملتقى الديناميات الاقتصادية الجهوية",
-    description: "Un regard sur la position stratégique, les infrastructures et les axes de développement à prioriser.", descriptionAr: "نظرة على الموقع الاستراتيجي والبنية التحتية وأولويات التنمية.",
+    description: "Un regard sur la position stratégique, les infrastructures et les axes de développement à prioriser.", descriptionAr: "نظرة على الموقع الاستراتيجي والبنية التحتية وأولويات التنمية.", image: "/stadiums/moulay-abdellah-venue.jpg",
   },
   {
     category: "Actualités économiques", categoryAr: "أخبار اقتصادية",
     date: "09 mai 2026", dateAr: "09 ماي 2026",
     title: "Territoires, innovation et attractivité : les nouvelles logiques de croissance", titleAr: "المجالات الترابية والابتكار والجاذبية: منطق النمو الجديد",
-    description: "Des éléments de contexte pour repenser les trajectoires de développement durable et inclusif.", descriptionAr: "معطيات سياقية لإعادة التفكير في مسارات التنمية المستدامة والشاملة.",
+    description: "Des éléments de contexte pour repenser les trajectoires de développement durable et inclusif.", descriptionAr: "معطيات سياقية لإعادة التفكير في مسارات التنمية المستدامة والشاملة.", image: "/stadiums/marrakech-venue.jpg",
   },
 ] as const;
 

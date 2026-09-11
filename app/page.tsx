@@ -1039,6 +1039,10 @@ export default function Home() {
                   transition={{ ...reveal.transition, delay: index * 0.05 }}
                   className="group overflow-hidden rounded-[28px] border border-[#357B5F]/8 bg-white shadow-[0_18px_42px_rgba(11,31,51,0.04)] transition duration-300 hover:-translate-y-1"
                 >
+                  <div className="relative h-44 overflow-hidden bg-[#285C47]">
+                    <Image src={article.image} alt={isArabic ? article.titleAr : article.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw" className="object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#285C47]/75 to-transparent" />
+                  </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between gap-4 text-[0.6rem] uppercase tracking-[0.18em] text-[#66727D]">
                       <span>{isArabic ? article.categoryAr : article.category}</span>
