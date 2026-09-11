@@ -578,6 +578,52 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="vision" className="relative overflow-hidden bg-[#285C47] py-24 text-white">
+          <div className="grid-surface absolute inset-0 opacity-60" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,162,39,0.16),_transparent_40%)]" />
+
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...reveal} className="max-w-3xl">
+              <SectionLabel text={isArabic ? "الرؤية" : "Vision"} />
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-white md:text-5xl">
+                {isArabic ? "جعل بن سليمان إقليماً للفرص." : "Faire de Benslimane un territoire d'opportunités."}
+              </h2>
+            </motion.div>
+
+            <div className="relative mt-12 grid gap-8 md:grid-cols-3">
+              <div className="absolute left-1/2 top-6 hidden h-24 w-px -translate-x-1/2 bg-gradient-to-b from-[#357B5F] to-transparent md:block" />
+              {[
+                {
+                  title: isArabic ? "الجاذبية" : "Attractivité",
+                  text: isArabic ? "خلق ظروف الاستقبال، وجودة الحياة وصورة العلامة الإقليمية التي تعزز الثقة والرغبة في الاستثمار." : "Créer les conditions d'un accueil, d'un cadre de vie et d'une image de marque territoriale qui renforcent la confiance et l'envie d'investir.",
+                },
+                {
+                  title: isArabic ? "التنافسية" : "Compétitivité",
+                  text: isArabic ? "تجعل بن سليمان مكاناً لتوسيع فرص النشاط والابتكار والتنمية الاقتصادية المستدامة." : "Positionner Benslimane comme un lieu où se déploient les opportunités d'activité, l'innovation et le développement économique durable.",
+                },
+                {
+                  title: isArabic ? "الاستدامة" : "Durabilité",
+                  text: isArabic ? "مواءمة النمو مع حماية الموارد الطبيعية وجودة الحياة والتنمية على المدى الطويل للأجيال القادمة." : "Concilier croissance, protection des ressources naturelles, qualité de vie et long terme pour les générations futures.",
+                },
+              ].map((pillar, index) => (
+                <motion.div
+                  key={pillar.title}
+                  {...reveal}
+                  transition={{ ...reveal.transition, delay: index * 0.06 }}
+                  className="relative rounded-[28px] border border-white/10 bg-white/4 p-6 backdrop-blur-sm"
+                >
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#357B5F]/12 text-[#357B5F]">
+                    <span className="text-sm font-bold">{index + 1}</span>
+                  </div>
+                  <h3 className="text-2xl font-semibold tracking-[-0.05em] text-white">{pillar.title}</h3>
+                  <div className="my-5 h-px w-12 bg-gradient-to-r from-[#357B5F] to-transparent" />
+                  <p className="text-base leading-7 text-slate-200">{pillar.text}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="province" className="section-shell bg-[#ECE8E5]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
@@ -901,51 +947,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="vision" className="relative overflow-hidden bg-[#285C47] py-24 text-white">
-          <div className="grid-surface absolute inset-0 opacity-60" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,162,39,0.16),_transparent_40%)]" />
 
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div {...reveal} className="max-w-3xl">
-              <SectionLabel text={isArabic ? "الرؤية" : "Vision"} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-white md:text-5xl">
-                {isArabic ? "جعل بن سليمان إقليماً للفرص." : "Faire de Benslimane un territoire d'opportunités."}
-              </h2>
-            </motion.div>
-
-            <div className="relative mt-12 grid gap-8 md:grid-cols-3">
-              <div className="absolute left-1/2 top-6 hidden h-24 w-px -translate-x-1/2 bg-gradient-to-b from-[#357B5F] to-transparent md:block" />
-              {[
-                {
-                  title: isArabic ? "الجاذبية" : "Attractivité",
-                  text: isArabic ? "خلق ظروف الاستقبال، وجودة الحياة وصورة العلامة الإقليمية التي تعزز الثقة والرغبة في الاستثمار." : "Créer les conditions d'un accueil, d'un cadre de vie et d'une image de marque territoriale qui renforcent la confiance et l'envie d'investir.",
-                },
-                {
-                  title: isArabic ? "التنافسية" : "Compétitivité",
-                  text: isArabic ? "تجعل بن سليمان مكاناً لتوسيع فرص النشاط والابتكار والتنمية الاقتصادية المستدامة." : "Positionner Benslimane comme un lieu où se déploient les opportunités d'activité, l'innovation et le développement économique durable.",
-                },
-                {
-                  title: isArabic ? "الاستدامة" : "Durabilité",
-                  text: isArabic ? "مواءمة النمو مع حماية الموارد الطبيعية وجودة الحياة والتنمية على المدى الطويل للأجيال القادمة." : "Concilier croissance, protection des ressources naturelles, qualité de vie et long terme pour les générations futures.",
-                },
-              ].map((pillar, index) => (
-                <motion.div
-                  key={pillar.title}
-                  {...reveal}
-                  transition={{ ...reveal.transition, delay: index * 0.06 }}
-                  className="relative rounded-[28px] border border-white/10 bg-white/4 p-6 backdrop-blur-sm"
-                >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#357B5F]/12 text-[#357B5F]">
-                    <span className="text-sm font-bold">{index + 1}</span>
-                  </div>
-                  <h3 className="text-2xl font-semibold tracking-[-0.05em] text-white">{pillar.title}</h3>
-                  <div className="my-5 h-px w-12 bg-gradient-to-r from-[#357B5F] to-transparent" />
-                  <p className="text-base leading-7 text-slate-200">{pillar.text}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section className="section-shell bg-[#ECE8E5]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
