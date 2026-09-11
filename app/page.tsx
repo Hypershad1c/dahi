@@ -335,28 +335,27 @@ export default function Home() {
 
   return (
     <div dir={direction} className="min-h-screen bg-[#ECE8E5] text-[#1D2733]">
-      <header
-        className="fixed inset-x-0 top-0 z-50 border-b border-[#357B5F]/10 bg-[#ECE8E5]/95 shadow-[0_10px_30px_rgba(40,92,71,0.08)] backdrop-blur-xl transition-all duration-500"
-      >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] overflow-visible rounded-2xl border border-[#357B5F]/12 bg-[#ECE8E5]/95 shadow-[0_18px_50px_rgba(40,92,71,0.12)] backdrop-blur-xl transition-all duration-500">
+          <div className="flex items-center justify-between px-3 py-3 sm:px-5 lg:px-6">
           <a href="#accueil" className="flex items-center gap-3 text-left">
-            <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={176} height={96} priority className="h-11 w-28 rounded-lg bg-white object-contain shadow-sm sm:h-12 sm:w-32" />
+            <Image src="/dehy-logo.jpg" alt="DEHY Real Estate Development & Investment, Benslimane Morocco" width={176} height={96} priority className="h-11 w-28 rounded-xl bg-white object-contain shadow-sm ring-1 ring-[#357B5F]/10 sm:h-12 sm:w-32" />
           </a>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center gap-3 lg:flex xl:gap-5">
             {navigation.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-[#46515C] transition-colors duration-300 hover:text-[#357B5F]"
+                className="rounded-full px-2 py-2 text-[0.72rem] font-semibold text-[#46515C] transition-colors duration-300 hover:bg-white/75 hover:text-[#357B5F] xl:text-[0.78rem]"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden items-center gap-4 lg:flex">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#357B5F]/15 bg-white/70 p-1">
+          <div className="hidden items-center gap-2 lg:flex">
+            <div className="inline-flex items-center gap-1 rounded-full border border-[#357B5F]/15 bg-white/75 p-1 shadow-sm">
               {(["fr", "ar"] as const).map((option) => (
                 <button
                   key={option}
@@ -372,14 +371,14 @@ export default function Home() {
                 </button>
               ))}
             </div>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[#357B5F]/20 bg-[#357B5F] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#285C47]">
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[#357B5F] px-4 py-2.5 text-xs font-bold text-white shadow-[0_8px_18px_rgba(53,123,95,0.22)] transition hover:-translate-y-0.5 hover:bg-[#285C47] sm:px-5 sm:text-sm">
               {currentCopy.heroPrimary}
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
 
-          <div className="flex items-center gap-2 lg:hidden">
-            <div className="inline-flex items-center gap-1 rounded-full border border-[#357B5F]/15 bg-white/70 p-1">
+          <div className="flex items-center gap-1.5 lg:hidden">
+            <div className="inline-flex items-center gap-1 rounded-full border border-[#357B5F]/15 bg-white/75 p-1 shadow-sm">
               {(["fr", "ar"] as const).map((option) => (
                 <button
                   key={option}
@@ -431,6 +430,7 @@ export default function Home() {
             </motion.div>
           ) : null}
         </AnimatePresence>
+        </div>
       </header>
 
       <main>
