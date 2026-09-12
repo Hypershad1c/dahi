@@ -315,10 +315,10 @@ const heroMetricOptions = [
 ] as const;
 
 const investmentVisuals = [
-  { src: "/stadiums/hassan-ii-landscape.jpg", alt: "Grand Stade Hassan II and Benslimane development horizon" },
-  { src: "/stadiums/agadir-venue.jpg", alt: "Moroccan infrastructure and sustainable tourism venue" },
-  { src: "/stadiums/tanger-aerial.jpg", alt: "Moroccan transport and logistics infrastructure" },
-  { src: "/stadiums/marrakech-venue.jpg", alt: "Moroccan tourism and urban development venue" },
+  { src: "/stadiums/article-3.png", alt: "Benslimane investment and development landscape" },
+  { src: "/stadiums/article-4.png", alt: "Sustainable tourism investment opportunity in Morocco" },
+  { src: "/stadiums/article-5.png", alt: "Transport and logistics investment opportunity in Morocco" },
+  { src: "/stadiums/article-6.png", alt: "Urban development and tourism opportunity in Morocco" },
 ] as const;
 
 export default function Home() {
@@ -479,7 +479,7 @@ export default function Home() {
             className="hero-media absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')",
+                "url('/stadiums/article-1.png')",
             }}
           />
           <div className="bg-hero-overlay absolute inset-0" />
@@ -664,7 +664,7 @@ export default function Home() {
 
               <div className="space-y-6 text-lg leading-8 text-[#46515C]">
                 <div className="overflow-hidden rounded-[24px] border border-[#357B5F]/12 bg-white shadow-[0_16px_40px_rgba(40,92,71,0.08)]">
-                  <Image src="/stadiums/hassan-ii-landscape.jpg" alt={isArabic ? "مشهد لمشروع الملعب الكبير الحسن الثاني في بن سليمان" : "Vue du projet du Grand Stade Hassan II à Benslimane"} width={1200} height={675} className="h-52 w-full object-cover sm:h-64" loading="lazy" />
+                  <Image src="/stadiums/article-2.png" alt={isArabic ? "مشهد لمشروع الملعب الكبير الحسن الثاني في بن سليمان" : "Vue du projet du Grand Stade Hassan II à Benslimane"} width={1200} height={675} className="h-52 w-full object-cover sm:h-64" loading="lazy" />
                   <div className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#66727D]">{isArabic ? "بن سليمان · أفق 2030" : "Benslimane · Horizon 2030"}</div>
                 </div>
                 <p>{currentCopy.provinceText1}</p>
