@@ -143,7 +143,7 @@ export const projectCards = [
     impact: "Démultiplication de l'emploi et des activités économiques",
     impactAr: "تضاعف فرص التوظيف والأنشطة الاقتصادية",
     image:
-      "/stadiums/article-15.png",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
   },
   {
     title: "Programme de valorisation agricole",
@@ -157,7 +157,7 @@ export const projectCards = [
     impact: "Modernisation des filières et création de valeur locale",
     impactAr: "تحديث القطاعات وخلق القيمة المحلية",
     image:
-      "/stadiums/article-16.png",
+      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=85",
   },
   {
     title: "Écotourisme et patrimoine naturel",
@@ -171,7 +171,7 @@ export const projectCards = [
     impact: "Attractivité, accueil et développement durable",
     impactAr: "الجاذبية والضيافة والتنمية المستدامة",
     image:
-      "/stadiums/article-17.png",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
   },
   {
     title: "Mobilité et infrastructures",
@@ -185,7 +185,7 @@ export const projectCards = [
     impact: "Amélioration de la connectivité et de la fluidité des échanges",
     impactAr: "تحسين الاتصالية وتسهيل التبادلات",
     image:
-      "/stadiums/article-18.png",
+      "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=85",
   },
 ] as const;
 
@@ -194,25 +194,25 @@ export const articleCards = [
     category: "Études", categoryAr: "دراسات",
     date: "14 août 2026", dateAr: "14 غشت 2026",
     title: "Quels leviers pour accélérer l'attractivité économique de Benslimane ?", titleAr: "ما هي الروافع لتسريع الجاذبية الاقتصادية لبن سليمان؟",
-    description: "Une lecture territoriale des opportunités, des contraintes et des priorités d'action pour le développement local.", descriptionAr: "قراءة ترابية للفرص والتحديات وأولويات العمل من أجل التنمية المحلية.", image: "/stadiums/article-7.jpg",
+    description: "Une lecture territoriale des opportunités, des contraintes et des priorités d'action pour le développement local.", descriptionAr: "قراءة ترابية للفرص والتحديات وأولويات العمل من أجل التنمية المحلية.", image: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=85",
   },
   {
     category: "Investissement", categoryAr: "استثمار",
     date: "02 juillet 2026", dateAr: "02 يوليوز 2026",
     title: "Investir dans les territoires : enjeux, modèles et séquences de mise en œuvre", titleAr: "الاستثمار في المجالات الترابية: التحديات والنماذج ومراحل التنفيذ",
-    description: "Une analyse des conditions qui favorisent la décision d'investissement sur des territoires à fort potentiel.", descriptionAr: "تحليل للظروف التي تشجع على الاستثمار في المجالات ذات الإمكانات الكبيرة.", image: "/stadiums/article-8.jpg",
+    description: "Une analyse des conditions qui favorisent la décision d'investissement sur des territoires à fort potentiel.", descriptionAr: "تحليل للظروف التي تشجع على الاستثمار في المجالات ذات الإمكانات الكبيرة.", image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
   },
   {
     category: "Développement territorial", categoryAr: "تنمية ترابية",
     date: "18 juin 2026", dateAr: "18 يونيو 2026",
     title: "Benslimane au carrefour des dynamiques économiques régionales", titleAr: "بن سليمان عند ملتقى الديناميات الاقتصادية الجهوية",
-    description: "Un regard sur la position stratégique, les infrastructures et les axes de développement à prioriser.", descriptionAr: "نظرة على الموقع الاستراتيجي والبنية التحتية وأولويات التنمية.", image: "/stadiums/article-9.png",
+    description: "Un regard sur la position stratégique, les infrastructures et les axes de développement à prioriser.", descriptionAr: "نظرة على الموقع الاستراتيجي والبنية التحتية وأولويات التنمية.", image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85",
   },
   {
     category: "Actualités économiques", categoryAr: "أخبار اقتصادية",
     date: "09 mai 2026", dateAr: "09 ماي 2026",
     title: "Territoires, innovation et attractivité : les nouvelles logiques de croissance", titleAr: "المجالات الترابية والابتكار والجاذبية: منطق النمو الجديد",
-    description: "Des éléments de contexte pour repenser les trajectoires de développement durable et inclusif.", descriptionAr: "معطيات سياقية لإعادة التفكير في مسارات التنمية المستدامة والشاملة.", image: "/stadiums/article-10.jpg",
+    description: "Des éléments de contexte pour repenser les trajectoires de développement durable et inclusif.", descriptionAr: "معطيات سياقية لإعادة التفكير في مسارات التنمية المستدامة والشاملة.", image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=85",
   },
 ] as const;
 
@@ -270,10 +270,10 @@ export const pageMeta = {
 
 // Blog Articles
 export const blogArticles = [
-  { id: 1, title: "Grand Stade Hassan II : L'avancée des travaux et l'impact économique", titleAr: "الملعب الكبير الحسن الثاني: تقدم الأشغال والأثر الاقتصادي", excerpt: "Découvrez les dernières actualités sur la construction du plus grand stade de football au monde.", excerptAr: "اكتشف آخر المستجدات حول بناء أكبر ملعب لكرة القدم في العالم.", date: "15 septembre 2026", dateAr: "15 شتنبر 2026", category: "Infrastructure", categoryAr: "البنية التحتية", image: "/stadiums/article-11.jpg" },
-  { id: 2, title: "Ville intelligente : Benslimane se transforme", titleAr: "المدينة الذكية: بن سليمان تتحول", excerpt: "Comment Benslimane se positionne comme centre de développement urbain durable et innovant.", excerptAr: "كيف تتموقع بن سليمان كمركز للتنمية الحضرية المستدامة والمبتكرة.", date: "10 septembre 2026", dateAr: "10 شتنبر 2026", category: "Développement urbain", categoryAr: "التنمية الحضرية", image: "/stadiums/article-12.jpg" },
-  { id: 3, title: "Opportunités immobilières : Partenariat avec Domify", titleAr: "الفرص العقارية: شراكة مع Domify", excerpt: "Explorez les nouvelles opportunités d'investissement immobilier adaptées à la demande internationale.", excerptAr: "استكشف فرص الاستثمار العقاري الجديدة الملائمة للطلب الدولي.", date: "05 septembre 2026", dateAr: "05 شتنبر 2026", category: "Immobilier", categoryAr: "العقارات", image: "/stadiums/article-13.jpg" },
-  { id: 4, title: "Gare TGV : Connecter Benslimane au reste du Maroc", titleAr: "محطة القطار فائق السرعة: ربط بن سليمان بباقي المغرب", excerpt: "La modernisation de la gare et l'arrivée du TGV positionneront Benslimane comme carrefour stratégique.", excerptAr: "ستجعل تحديث المحطة ووصول القطار فائق السرعة بن سليمان ملتقى استراتيجياً.", date: "01 septembre 2026", dateAr: "01 شتنبر 2026", category: "Transport", categoryAr: "النقل", image: "/stadiums/article-14.jpg" },
+  { id: 1, title: "Grand Stade Hassan II : L'avancée des travaux et l'impact économique", titleAr: "الملعب الكبير الحسن الثاني: تقدم الأشغال والأثر الاقتصادي", excerpt: "Découvrez les dernières actualités sur la construction du plus grand stade de football au monde.", excerptAr: "اكتشف آخر المستجدات حول بناء أكبر ملعب لكرة القدم في العالم.", date: "15 septembre 2026", dateAr: "15 شتنبر 2026", category: "Infrastructure", categoryAr: "البنية التحتية", image: "https://images.unsplash.com/photo-1531415407113-9b95eaac05a4?auto=format&fit=crop&w=1200&q=85" },
+  { id: 2, title: "Ville intelligente : Benslimane se transforme", titleAr: "المدينة الذكية: بن سليمان تتحول", excerpt: "Comment Benslimane se positionne comme centre de développement urbain durable et innovant.", excerptAr: "كيف تتموقع بن سليمان كمركز للتنمية الحضرية المستدامة والمبتكرة.", date: "10 septembre 2026", dateAr: "10 شتنبر 2026", category: "Développement urbain", categoryAr: "التنمية الحضرية", image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1200&q=85" },
+  { id: 3, title: "Opportunités immobilières : Partenariat avec Domify", titleAr: "الفرص العقارية: شراكة مع Domify", excerpt: "Explorez les nouvelles opportunités d'investissement immobilier adaptées à la demande internationale.", excerptAr: "استكشف فرص الاستثمار العقاري الجديدة الملائمة للطلب الدولي.", date: "05 septembre 2026", dateAr: "05 شتنبر 2026", category: "Immobilier", categoryAr: "العقارات", image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1200&q=85" },
+  { id: 4, title: "Gare TGV : Connecter Benslimane au reste du Maroc", titleAr: "محطة القطار فائق السرعة: ربط بن سليمان بباقي المغرب", excerpt: "La modernisation de la gare et l'arrivée du TGV positionneront Benslimane comme carrefour stratégique.", excerptAr: "ستجعل تحديث المحطة ووصول القطار فائق السرعة بن سليمان ملتقى استراتيجياً.", date: "01 septembre 2026", dateAr: "01 شتنبر 2026", category: "Transport", categoryAr: "النقل", image: "https://images.unsplash.com/photo-1569163139394-de4798aa62b1?auto=format&fit=crop&w=1200&q=85" },
 ];
 
 // Partnerships
