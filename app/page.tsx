@@ -52,7 +52,6 @@ import {
   publicFigure,
   recruitmentPositions,
   sectorDistribution,
-  sectors,
   statistics,
 } from "@/data/site";
 
@@ -607,6 +606,40 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="stades-2030" className="section-shell bg-[#ECE8E5]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div {...reveal} className="mb-12 max-w-3xl">
+              <SectionLabel text={isArabic ? "كأس العالم 2030" : "Coupe du Monde 2030"} />
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#357B5F] md:text-5xl">
+                {isArabic ? "ملاعب المغرب في أفق 2030" : "Les stades du Maroc à l’horizon 2030"}
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[#46515C]">
+                {isArabic ? "تستعد المملكة لاستقبال العالم عبر شبكة من المنشآت الرياضية الكبرى في مختلف المدن المغربية." : "Le Maroc prépare une expérience mondiale à travers un réseau d’enceintes sportives majeures dans plusieurs villes du Royaume."}
+              </p>
+            </motion.div>
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {moroccoStadiums.map((stadium, index) => (
+                <motion.article key={stadium.name} {...reveal} transition={{ ...reveal.transition, delay: index * 0.05 }} className="group overflow-hidden rounded-[28px] border border-[#357B5F]/12 bg-white shadow-[0_16px_40px_rgba(1,71,173,0.08)] transition duration-300 hover:-translate-y-1">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#285C47]">
+                    <Image src={stadium.image} alt={isArabic ? stadium.nameAr : stadium.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" loading={index < 2 ? "eager" : "lazy"} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#285C47]/90 via-[#285C47]/10 to-transparent" />
+                    <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 text-white">
+                      <div><div className="text-[0.62rem] uppercase tracking-[0.16em] text-white/75">{isArabic ? stadium.cityAr : stadium.city}</div><h3 className="mt-1 text-xl font-semibold tracking-[-0.04em]">{isArabic ? stadium.nameAr : stadium.name}</h3></div>
+                      <span className="shrink-0 rounded-full bg-white/15 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.1em] backdrop-blur-md">{isArabic ? stadium.statusAr : stadium.status}</span>
+                    </div>
+                  </div>
+                  <div className="p-5 sm:p-6">
+                    <div className="flex items-center justify-between gap-3 text-sm"><span className="font-semibold text-[#357B5F]">{stadium.capacity} {isArabic ? "مقعد" : "places"}</span><span className="rounded-full bg-[#ECE8E5] px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-[#357B5F]">{isArabic ? stadium.tagAr : stadium.tag}</span></div>
+                    <p className="mt-4 text-sm leading-6 text-[#46515C]">{isArabic ? stadium.detailAr : stadium.detail}</p>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+            <p className="mt-8 text-xs leading-6 text-[#46515C]">{isArabic ? "قائمة تعريفية بالملاعب ضمن تحضيرات المغرب لكأس العالم 2030؛ الصور ومعطيات التقدم: Le360 Sport، 2 شتنبر 2026." : "Sélection indicative des enceintes mobilisées dans les préparatifs du Maroc pour 2030 ; images et état d’avancement : Le360 Sport, 2 septembre 2026."}</p>
+          </div>
+        </section>
+
+
         <section id="vision" className="relative overflow-hidden bg-[#285C47] py-24 text-white">
           <div className="grid-surface absolute inset-0 opacity-60" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,162,39,0.16),_transparent_40%)]" />
@@ -786,28 +819,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#ECE8E5] py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div {...reveal} className="mb-12">
-              <SectionLabel text={currentCopy.sectorsLabel} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#357B5F] md:text-5xl">{currentCopy.sectorsTitle}</h2>
-            </motion.div>
-
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-              {sectors.map((sector, index) => (
-                <motion.div key={sector.number} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -4 }} className="group relative overflow-hidden rounded-[26px] border border-[#357B5F]/8 bg-white p-6 shadow-[0_16px_36px_rgba(10,19,28,0.04)]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,162,39,0.08),_transparent_58%)] opacity-0 transition duration-500 group-hover:opacity-100" />
-                  <div className="relative">
-                    <div className="text-lg font-semibold tracking-[-0.05em] text-[#357B5F] transition group-hover:text-[#357B5F]">{sector.number}</div>
-                    <h3 className="mt-6 text-2xl font-semibold tracking-[-0.05em] text-[#357B5F]">{isArabic ? sector.titleAr : sector.title}</h3>
-                    <p className="mt-4 text-base leading-7 text-[#46515C]">{isArabic ? sector.descriptionAr : sector.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="donnees" className="section-shell bg-[#ECE8E5]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...reveal} className="mb-12 max-w-3xl">
@@ -930,39 +941,6 @@ export default function Home() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section id="stades-2030" className="section-shell bg-[#ECE8E5]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div {...reveal} className="mb-12 max-w-3xl">
-              <SectionLabel text={isArabic ? "كأس العالم 2030" : "Coupe du Monde 2030"} />
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.06em] text-[#357B5F] md:text-5xl">
-                {isArabic ? "ملاعب المغرب في أفق 2030" : "Les stades du Maroc à l’horizon 2030"}
-              </h2>
-              <p className="mt-5 text-lg leading-8 text-[#46515C]">
-                {isArabic ? "تستعد المملكة لاستقبال العالم عبر شبكة من المنشآت الرياضية الكبرى في مختلف المدن المغربية." : "Le Maroc prépare une expérience mondiale à travers un réseau d’enceintes sportives majeures dans plusieurs villes du Royaume."}
-              </p>
-            </motion.div>
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {moroccoStadiums.map((stadium, index) => (
-                <motion.article key={stadium.name} {...reveal} transition={{ ...reveal.transition, delay: index * 0.05 }} className="group overflow-hidden rounded-[28px] border border-[#357B5F]/12 bg-white shadow-[0_16px_40px_rgba(1,71,173,0.08)] transition duration-300 hover:-translate-y-1">
-                  <div className="relative aspect-[16/10] overflow-hidden bg-[#285C47]">
-                    <Image src={stadium.image} alt={isArabic ? stadium.nameAr : stadium.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" loading={index < 2 ? "eager" : "lazy"} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#285C47]/90 via-[#285C47]/10 to-transparent" />
-                    <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 text-white">
-                      <div><div className="text-[0.62rem] uppercase tracking-[0.16em] text-white/75">{isArabic ? stadium.cityAr : stadium.city}</div><h3 className="mt-1 text-xl font-semibold tracking-[-0.04em]">{isArabic ? stadium.nameAr : stadium.name}</h3></div>
-                      <span className="shrink-0 rounded-full bg-white/15 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.1em] backdrop-blur-md">{isArabic ? stadium.statusAr : stadium.status}</span>
-                    </div>
-                  </div>
-                  <div className="p-5 sm:p-6">
-                    <div className="flex items-center justify-between gap-3 text-sm"><span className="font-semibold text-[#357B5F]">{stadium.capacity} {isArabic ? "مقعد" : "places"}</span><span className="rounded-full bg-[#ECE8E5] px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-[#357B5F]">{isArabic ? stadium.tagAr : stadium.tag}</span></div>
-                    <p className="mt-4 text-sm leading-6 text-[#46515C]">{isArabic ? stadium.detailAr : stadium.detail}</p>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-            <p className="mt-8 text-xs leading-6 text-[#46515C]">{isArabic ? "قائمة تعريفية بالملاعب ضمن تحضيرات المغرب لكأس العالم 2030؛ الصور ومعطيات التقدم: Le360 Sport، 2 شتنبر 2026." : "Sélection indicative des enceintes mobilisées dans les préparatifs du Maroc pour 2030 ; images et état d’avancement : Le360 Sport, 2 septembre 2026."}</p>
           </div>
         </section>
 
