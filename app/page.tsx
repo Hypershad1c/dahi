@@ -314,10 +314,14 @@ const heroMetricOptions = [
 ] as const;
 
 const investmentVisuals = [
-  { src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85", alt: "Benslimane investment and development landscape" },
-  { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85", alt: "Sustainable tourism investment opportunity in Morocco" },
-  { src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85", alt: "Transport and logistics investment opportunity in Morocco" },
-  { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85", alt: "Urban development and tourism opportunity in Morocco" },
+  { src: "/invest-agriculture.jpg", alt: "Champs agricoles et oliveraies de Benslimane" },
+  { src: "/invest-tourism.jpg", alt: "Paysage naturel et écotourisme à Benslimane" },
+  { src: "/invest-industry.jpg", alt: "Zone industrielle moderne au Maroc" },
+  { src: "/invest-logistics.jpg", alt: "Plateforme logistique et transport à Benslimane" },
+  { src: "/invest-real-estate.jpg", alt: "Développement urbain durable au Maroc" },
+  { src: "/invest-renewable-energy.jpg", alt: "Projet d'énergie solaire au Maroc" },
+  { src: "/invest-sport-leisure.jpg", alt: "Complexe sportif et loisirs au Maroc" },
+  { src: "/invest-services.jpg", alt: "Espace de services et innovation au Maroc" },
 ] as const;
 
 export default function Home() {
@@ -795,7 +799,7 @@ export default function Home() {
                   <motion.div key={card.title} {...reveal} transition={{ ...reveal.transition, delay: index * 0.04 }} whileHover={{ y: -6 }} className="group relative overflow-hidden rounded-[28px] border border-[#357B5F]/8 bg-white shadow-[0_16px_40px_rgba(10,19,28,0.05)] transition-all duration-300">
                     <div className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#357B5F] via-[#D8B45A] to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                     <div className="relative h-36 overflow-hidden">
-                      <Image src={investmentVisuals[index % investmentVisuals.length].src} alt={investmentVisuals[index % investmentVisuals.length].alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw" className="object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+                      <Image src={investmentVisuals[index].src} alt={isArabic ? `${card.titleAr} — صورة فرص الاستثمار` : investmentVisuals[index].alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw" className="object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#285C47]/70 to-transparent" />
                     </div>
                     <div className="p-6">
